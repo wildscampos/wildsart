@@ -1,0 +1,58 @@
+import { useEffect } from 'react';
+
+interface StructuredDataProps {
+  type: 'organization' | 'faqPage';
+  data?: any;
+}
+
+export const StructuredData = ({ type, data }: StructuredDataProps) => {
+  useEffect(() => {
+    let schema = {};
+
+    if (type === 'organization') {
+      schema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Wilds Art's",
+        "description": "Estúdio de design focado em artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte/gravação e rótulos/embalagens.",
+        "url": "https://wildsarts.com",
+        "logo": "https://wildsarts.com/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+55-12-981823416",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        },
+        "sameAs": [
+          "https://instagram.com/wildsarts",
+          "https://youtube.com/wildsarts",
+          "https://linkedin.com/company/wildsarts"
+        ]
+      };
+    } else if (type === 'faqPage' && data) {
+      schema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.map((faq: any) => ({
+          "@type": "Question",
+          "name": faq.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.answer
+          }
+        }))
+      };
+    }
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, [type, data]);
+
+  return null;
+};

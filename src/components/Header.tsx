@@ -12,7 +12,7 @@ export const Header = () => {
     { label: 'Serviços', href: '#servicos' },
     { label: 'Portfólio', href: '#portfolio' },
     { label: 'Depoimentos', href: '#depoimentos' },
-    { label: 'Planos', href: '/planos' },
+    { label: 'Planos', href: '#planos' },
     { label: 'Contato', href: '#contato' },
   ];
 

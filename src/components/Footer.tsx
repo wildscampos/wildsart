@@ -1,11 +1,4 @@
-import { Instagram, Youtube, Linkedin } from 'lucide-react';
 import logoHorizontal from '@/assets/logo-horizontal.png';
-
-const socialLinks = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-];
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -28,23 +21,6 @@ export const Footer = () => {
             Wilds Art's — artes para redes sociais, identidade visual e manual de marca. 
             Também vetorização, vetores para corte e gravação (MDF, acrílico, metal) e rótulos/embalagens.
           </p>
-
-          {/* Social Links */}
-          <div className="flex justify-center space-x-6">
-            {socialLinks.map((social, index) => {
-              const IconComponent = social.icon;
-              return (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="flex items-center justify-center w-10 h-10 bg-background border border-border rounded-lg hover:bg-card transition-colors"
-                  aria-label={social.label}
-                >
-                  <IconComponent className="h-4 w-4" />
-                </a>
-              );
-            })}
-          </div>
 
           {/* Copyright */}
           <div className="pt-8 border-t border-border">

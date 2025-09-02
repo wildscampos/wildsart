@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, MessageCircle, Mail } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { ThemeToggle } from './ui/theme-toggle';
 import logoHorizontal from '@/assets/logo-horizontal.png';
@@ -59,20 +59,6 @@ export const Header = () => {
             </a>
           </Button>
           
-          <Button 
-            variant="outline" 
-            size="sm"
-            asChild
-          >
-            <a 
-              href="mailto:wildsarts@gmail.com?subject=Contato%20via%20site&body=Olá,%20quero%20um%20orçamento."
-              className="flex items-center gap-2"
-            >
-              <Mail className="h-4 w-4" />
-              E-mail
-            </a>
-          </Button>
-          
           <ThemeToggle />
         </div>
 
@@ -123,20 +109,6 @@ export const Header = () => {
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
-                </a>
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                className="w-full"
-                asChild
-              >
-                <a 
-                  href="mailto:wildsarts@gmail.com?subject=Contato%20via%20site&body=Olá,%20quero%20um%20orçamento."
-                  className="flex items-center justify-center gap-2"
-                >
-                  <Mail className="h-4 w-4" />
-                  E-mail
                 </a>
               </Button>
             </div>

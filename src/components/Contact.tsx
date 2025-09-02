@@ -1,11 +1,5 @@
-import { MessageCircle, Mail, Instagram, Youtube, Linkedin } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
-
-const socialLinks = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Youtube, label: 'YouTube', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
-];
 
 export const Contact = () => {
   return (
@@ -20,7 +14,7 @@ export const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-md mx-auto space-y-4 mb-12">
+        <div className="max-w-md mx-auto mb-12">
           <Button 
             size="lg" 
             className="w-full text-lg py-6"
@@ -36,38 +30,6 @@ export const Contact = () => {
               WhatsApp
             </a>
           </Button>
-          
-          <Button 
-            variant="outline" 
-            size="lg" 
-            className="w-full text-lg py-6"
-            asChild
-          >
-            <a 
-              href="mailto:wildsarts@gmail.com?subject=Contato%20via%20site&body=Olá,%20quero%20um%20orçamento."
-              className="flex items-center justify-center gap-3"
-            >
-              <Mail className="h-5 w-5" />
-              E-mail
-            </a>
-          </Button>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center space-x-6">
-          {socialLinks.map((social, index) => {
-            const IconComponent = social.icon;
-            return (
-              <a
-                key={index}
-                href={social.href}
-                className="flex items-center justify-center w-12 h-12 bg-card border border-border rounded-lg hover:bg-muted transition-colors"
-                aria-label={social.label}
-              >
-                <IconComponent className="h-5 w-5" />
-              </a>
-            );
-          })}
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { MessageCircle, Mail, Check, Download } from 'lucide-react';
+import { MessageCircle, Check, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -144,7 +144,7 @@ export const Plans = () => {
                       ))}
                     </ul>
                     
-                    <div className="space-y-2 pt-4">
+                    <div className="pt-4">
                       <Button 
                         className="w-full"
                         variant={plan.recommended ? "default" : "outline"}
@@ -157,22 +157,7 @@ export const Plans = () => {
                           className="flex items-center justify-center gap-2"
                         >
                           <MessageCircle className="h-4 w-4" />
-                          WhatsApp
-                        </a>
-                      </Button>
-                      
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
-                        className="w-full"
-                        asChild
-                      >
-                        <a 
-                          href="mailto:wildsarts@gmail.com?subject=Contato%20via%20site&body=Olá,%20quero%20um%20orçamento."
-                          className="flex items-center justify-center gap-2"
-                        >
-                          <Mail className="h-4 w-4" />
-                          E-mail
+                          Contratar via WhatsApp
                         </a>
                       </Button>
                     </div>

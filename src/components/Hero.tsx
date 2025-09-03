@@ -22,7 +22,7 @@ export const Hero = () => {
         {/* Hero Content */}
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-            Wilds Art's —{' '}
+            Wilds Art's<br />
             <span className="text-primary">Onde sua visão vira design</span>
           </h1>
           

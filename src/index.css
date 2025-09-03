@@ -115,4 +115,14 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Enhanced button hover effects */
+  .btn-primary-hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .btn-primary-hover:hover {
+    @apply transform scale-105 shadow-lg;
+    box-shadow: 0 10px 25px -5px hsl(var(--accent) / 0.3);
+  }
 }

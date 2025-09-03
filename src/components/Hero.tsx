@@ -34,7 +34,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button 
               size="lg" 
-              className="w-full sm:w-auto text-lg px-8 py-6 btn-primary-hover"
+              className="w-full sm:w-auto text-lg px-8 py-6"
               asChild
             >
               <a 

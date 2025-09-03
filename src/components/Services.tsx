@@ -39,7 +39,7 @@ const services = [
   {
     icon: Package,
     title: 'Rótulos e embalagens',
-    description: 'Design funcional, pronto para impressão e PDV.',
+    description: 'Criação de arte para rótulos e embalagens, com design funcional e pronto para impressão.',
   },
 ];
 

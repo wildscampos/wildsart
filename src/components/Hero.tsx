@@ -27,7 +27,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-balance max-w-3xl mx-auto">
-            Artes para redes sociais, identidade visual e peças prontas para produzir e vender.
+            Artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte e gravação, rótulos e embalagens. Peças prontas para produzir e vender.
           </p>
 
           {/* CTAs */}

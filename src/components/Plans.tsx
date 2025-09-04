@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { MessageCircle, Check, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -48,11 +47,11 @@ const faqs = [
   },
   {
     question: 'Quais formatos de entrega?',
-    answer: 'SVG, CDR, AI, PDF, DXF, PNG.'
+    answer: 'PNG, JPG, PDF para posts. MP4 para stories e motions.'
   },
   {
-    question: 'Fazem arquivo para laser/router?',
-    answer: 'Sim, arquivos otimizados para MDF, acrílico e metal, com tolerâncias e encaixes definidos conforme o projeto.'
+    question: 'Posso escolher as datas de postagem?',
+    answer: 'Sim, você define as datas e nós criamos o conteúdo seguindo seu cronograma.'
   },
   {
     question: 'Prazos de entrega?',
@@ -61,42 +60,15 @@ const faqs = [
 ];
 
 export const Plans = () => {
-  const [timeLeft, setTimeLeft] = useState('');
-
-  useEffect(() => {
-    const targetDate = new Date('2025-12-31T23:59:59-03:00');
-    
-    const updateCountdown = () => {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
-      
-      if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-        
-        setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-      } else {
-        setTimeLeft('Promoção encerrada');
-      }
-    };
-
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-    
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section id="planos" className="py-20">
       <StructuredData type="faqPage" data={faqs} />
       <div className="container mx-auto px-4">
         {/* Hero */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Planos de Assinatura</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Design para Redes Sociais</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Constância criativa com prazos definidos e atendimento direto.
+            Conteúdo visual profissional e constante para suas redes sociais.
           </p>
         </div>
 
@@ -218,22 +190,6 @@ export const Plans = () => {
               </tbody>
             </table>
           </div>
-        </div>
-
-        {/* Promo Banner */}
-        <div className="mb-20">
-          <Card className="max-w-4xl mx-auto bg-primary/5 border-primary/20">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Indique & Ganhe 2026</h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Assinou e indicou alguém que assinou? Você concorre a 1 ano do ESSENCIAL (R$ 500/mês) grátis em 2026. 
-                Cada indicação paga = 1 número. Sorteio em janeiro/2026.
-              </p>
-              <div className="text-2xl font-bold text-primary">
-                {timeLeft}
-              </div>
-            </CardContent>
-          </Card>
         </div>
 
         {/* FAQ */}

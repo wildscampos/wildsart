@@ -12,19 +12,19 @@ const clients = [
   {
     name: "STAMP|CIA",
     subtitle: "Estamparia Digital",
-    logo: "/lovable-uploads/9167cb4f-9fbd-4278-b3f4-acd8be268bbd.png",
+    logo: "/lovable-uploads/db1fc48f-67f3-472a-b6f2-7f21d2d989d4.png",
     website: "https://www.stampcia.com.br/"
   },
   {
     name: "TransKav Express",
     subtitle: "Transporte e Logística",
-    logo: "/lovable-uploads/22617fdc-dc3c-4326-b1ed-122bbac3af35.png",
+    logo: "/lovable-uploads/540213af-8d15-483d-85fe-2cf8f214bd97.png",
     website: "https://transkav.lovable.app/"
   },
   {
     name: "Cia da Fé",
     subtitle: "Camisetas Católicas",
-    logo: "/lovable-uploads/d8072c32-8f0c-414d-a7ad-d49b91a9138e.png",
+    logo: "/lovable-uploads/284477c0-3c6e-4a63-a4c9-2d319d510d74.png",
     website: "https://ciadafe.com.br/"
   },
   {

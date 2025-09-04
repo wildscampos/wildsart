@@ -30,18 +30,18 @@ const clients = [
   {
     name: "Luminabox",
     subtitle: "Anúncios Online",
-    logo: "/lovable-uploads/e0e67c25-bbc1-446e-8c9d-0a5c5bed48bc.png",
+    logo: "/lovable-uploads/cd7a7768-c2ef-4c99-8309-ed4175b2b2d8.png",
     website: "https://luminabox.com.br/"
   },
   {
     name: "Cantina das Marias",
     subtitle: "Comida Caseira",
-    logo: "/lovable-uploads/e0e67c25-bbc1-446e-8c9d-0a5c5bed48bc.png"
+    logo: "/lovable-uploads/263c2bb0-e232-4bd9-9829-f1f5a623afe3.png"
   },
   {
     name: "Mimos da Drika",
     subtitle: "Presentes e Decoração",
-    logo: "/lovable-uploads/e0e67c25-bbc1-446e-8c9d-0a5c5bed48bc.png"
+    logo: "/lovable-uploads/3878e6a3-3c75-4899-8748-81ead810c47b.png"
   }
 ];
 

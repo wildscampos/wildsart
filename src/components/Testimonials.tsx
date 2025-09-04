@@ -1,20 +1,43 @@
 import { Card, CardContent } from './ui/card';
+import Autoplay from "embla-carousel-autoplay";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const testimonials = [
   {
-    text: "Arquivo perfeito para produção, sem retrabalho.",
-    author: "Carla",
-    company: "marcenaria"
+    text: "Trabalho impecável! As peças chegaram prontas para produção, sem necessidade de ajustes. A qualidade técnica é excelente.",
+    author: "Waldir",
+    company: "Cia da Fé"
   },
   {
-    text: "Entrega ágil e capricho; o logo elevou a marca.",
-    author: "Lucas",
-    company: "agência"
+    text: "Entrega sempre no prazo e comunicação clara. Os arquivos são perfeitos para estamparia digital, facilitam muito nosso processo.",
+    author: "Neiva",
+    company: "Stamp|Cia"
   },
   {
-    text: "Comunicação simples e resultado consistente.",
-    author: "Ana",
-    company: "e-commerce"
+    text: "Profissionalismo de primeira! O design da nossa marca ficou moderno e impactante. Recomendo sem dúvidas.",
+    author: "Leandro",
+    company: "LuminaBox"
+  },
+  {
+    text: "Criatividade e atenção aos detalhes que fazem a diferença. Cada peça é pensada com carinho e técnica.",
+    author: "Sandra",
+    company: "Mimos da Drika"
+  },
+  {
+    text: "Identidade visual forte e marcante! O resultado superou nossas expectativas e fortaleceu nossa presença no mercado.",
+    author: "Kleber",
+    company: "TransKav"
+  },
+  {
+    text: "Design acolhedor que traduz perfeitamente o conceito da nossa cantina. Ficamos muito satisfeitas com o resultado!",
+    author: "Izilda",
+    company: "Cantina das Marias"
   }
 ];
 
@@ -29,19 +52,39 @@ export const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <Card key={index} className="border-border">
-              <CardContent className="p-6">
-                <blockquote className="text-lg leading-relaxed mb-4">
-                  "{testimonial.text}"
-                </blockquote>
-                <cite className="text-muted-foreground not-italic">
-                  — {testimonial.author}, {testimonial.company}
-                </cite>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <Carousel
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+              }),
+            ]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {testimonials.map((testimonial, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/3">
+                  <Card className="border-border h-full">
+                    <CardContent className="p-6 flex flex-col h-full">
+                      <blockquote className="text-lg leading-relaxed mb-4 flex-1">
+                        "{testimonial.text}"
+                      </blockquote>
+                      <cite className="text-muted-foreground not-italic font-medium">
+                        — {testimonial.author}, {testimonial.company}
+                      </cite>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
         </div>
       </div>
     </section>

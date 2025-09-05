@@ -1,4 +1,4 @@
-import { MessageCircle, Check, Download } from 'lucide-react';
+import { MessageCircle, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -235,20 +235,6 @@ export const Plans = () => {
               >
                 <MessageCircle className="h-5 w-5" />
                 Assinar agora
-              </a>
-            </Button>
-            
-            <Button 
-              variant="outline" 
-              size="lg"
-              asChild
-            >
-              <a 
-                href="#"
-                className="flex items-center justify-center gap-2"
-              >
-                <Download className="h-5 w-5" />
-                Baixar PDF dos planos
               </a>
             </Button>
           </div>

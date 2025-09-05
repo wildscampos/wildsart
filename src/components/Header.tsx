@@ -18,39 +18,30 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Left side - Desktop Actions */}
-        <div className="hidden lg:flex items-center space-x-3">
-          <Button 
-            variant="default" 
-            size="sm"
-            asChild
-          >
-            <a 
-              href="https://wa.me/5512981823416?text=Olá,%20vim%20pelo%20site%20da%20Wilds%20Art's%20e%20quero%20um%20orçamento."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
-            >
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
-            </a>
-          </Button>
-          
+      <div className="container mx-auto px-4 h-16 flex items-center">
+        {/* Left side - Theme Toggle and Menu */}
+        <div className="flex items-center space-x-3">
           <ThemeToggle />
-        </div>
-
-        {/* Logo - Now on the right */}
-        <div className="flex items-center">
-          <img 
-            src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
-            alt="Wilds Art's - logotipo" 
-            className="h-8 w-auto"
-          />
+          
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
+              )}
+            </Button>
+          </div>
         </div>
 
         {/* Desktop Navigation - Center */}
-        <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+        <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -62,21 +53,13 @@ export const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile Menu Button - Left side */}
-        <div className="lg:hidden flex items-center space-x-2">
-          <ThemeToggle />
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
-            {mobileMenuOpen ? (
-              <X className="h-5 w-5" />
-            ) : (
-              <Menu className="h-5 w-5" />
-            )}
-          </Button>
+        {/* Logo - Right side */}
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
+            alt="Wilds Art's - logotipo" 
+            className="h-8 w-auto"
+          />
         </div>
       </div>
 

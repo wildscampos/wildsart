@@ -18,11 +18,9 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 h-16 flex items-center">
-        {/* Left side - Theme Toggle and Menu */}
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Left side - Menu Button and Theme Toggle */}
         <div className="flex items-center space-x-3">
-          <ThemeToggle />
-          
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <Button
@@ -38,10 +36,12 @@ export const Header = () => {
               )}
             </Button>
           </div>
+          
+          <ThemeToggle />
         </div>
 
         {/* Desktop Navigation - Center */}
-        <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
+        <nav className="hidden lg:flex items-center space-x-8">
           {navItems.map((item) => (
             <a
               key={item.label}

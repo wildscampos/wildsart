@@ -19,29 +19,7 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img 
-            src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
-            alt="Wilds Art's - logotipo" 
-            className="h-8 w-auto"
-          />
-        </div>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        {/* Desktop Actions */}
+        {/* Left side - Desktop Actions */}
         <div className="hidden lg:flex items-center space-x-3">
           <Button 
             variant="default" 
@@ -62,7 +40,29 @@ export const Header = () => {
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Logo - Now on the right */}
+        <div className="flex items-center">
+          <img 
+            src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
+            alt="Wilds Art's - logotipo" 
+            className="h-8 w-auto"
+          />
+        </div>
+
+        {/* Desktop Navigation - Center */}
+        <nav className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Mobile Menu Button - Left side */}
         <div className="lg:hidden flex items-center space-x-2">
           <ThemeToggle />
           <Button

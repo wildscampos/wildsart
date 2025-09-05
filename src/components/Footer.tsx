@@ -10,7 +10,7 @@ export const Footer = () => {
           {/* Logo */}
           <div>
             <img 
-              src={logoHorizontal} 
+              src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
               alt="Wilds Art's - logotipo" 
               className="h-8 w-auto mx-auto"
             />

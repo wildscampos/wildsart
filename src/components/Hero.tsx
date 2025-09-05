@@ -13,7 +13,7 @@ export const Hero = () => {
         {/* Logo - Will use the uploaded logo */}
         <div className="mb-8">
           <img 
-            src="/lovable-uploads/e0e67c25-bbc1-446e-8c9d-0a5c5bed48bc.png" 
+            src="/lovable-uploads/596bfd17-db0d-4361-a58b-ecdd75436b43.png" 
             alt="Wilds Art's - logotipo oficial" 
             className="mx-auto h-24 w-auto mb-6"
           />

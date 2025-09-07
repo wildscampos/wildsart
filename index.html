@@ -28,23 +28,17 @@
     
     <!-- Widget Atendente AI - Wilds Art's -->
     <script>
-      window.WildsAIConfig = {
-        projectId: 'wilds-arts-main',
-        position: 'bottom-right',
-        theme: 'light'
-      };
-      
       (function() {
         var script = document.createElement('script');
         script.src = 'https://atendente-ai-wilds-arts-uk7prkld.sites.blink.new/widget.js';
         script.async = true;
-        script.onload = function() {
-          console.log('Widget carregado com sucesso');
-        };
-        script.onerror = function() {
-          console.error('Erro ao carregar o widget');
-        };
         document.head.appendChild(script);
+        
+        window.WildsAIConfig = {
+          projectId: 'undefined',
+          position: 'bottom-right',
+          theme: 'light'
+        };
       })();
     </script>
   </body>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageCircle, X } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface WhatsAppWidgetProps {
   phoneNumber: string;
@@ -8,12 +9,15 @@ interface WhatsAppWidgetProps {
 
 const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({ 
   phoneNumber, 
-  message = "Olá! Gostaria de saber mais sobre os serviços da Wilds Art's." 
+  message 
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
+  
+  const defaultMessage = message || t('whatsapp.message');
 
   const handleWhatsAppClick = () => {
-    const encodedMessage = encodeURIComponent(message);
+    const encodedMessage = encodeURIComponent(defaultMessage);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
     setIsOpen(false);
@@ -26,7 +30,7 @@ const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 group"
-          aria-label="Abrir chat do WhatsApp"
+          aria-label={t('whatsapp.aria')}
         >
           {isOpen ? (
             <X className="w-6 h-6" />
@@ -47,16 +51,16 @@ const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
                   Wilds Art's
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Online agora
+                  {t('whatsapp.online')}
                 </p>
               </div>
             </div>
             
             <div className="mb-4">
               <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 text-sm text-gray-700 dark:text-gray-300">
-                Olá! 👋 Como posso ajudar você hoje?
+                {t('whatsapp.greeting')}
                 <br />
-                Clique no botão abaixo para conversar pelo WhatsApp!
+                {t('whatsapp.cta')}
               </div>
             </div>
 
@@ -65,7 +69,7 @@ const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
               className="w-full bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center gap-2"
             >
               <MessageCircle className="w-5 h-5" />
-              Conversar no WhatsApp
+              {t('whatsapp.button')}
             </button>
           </div>
         )}

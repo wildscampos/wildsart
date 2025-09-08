@@ -1,16 +1,18 @@
 import { MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Contact = () => {
+  const { t } = useLanguage();
   return (
     <section id="contato" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Fale com a Wilds Art's — contato direto e rápido
+            {t('contact.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Entre em contato conosco para solicitar seu orçamento personalizado
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -27,7 +29,7 @@ export const Contact = () => {
               className="flex items-center justify-center gap-3"
             >
               <MessageCircle className="h-5 w-5" />
-              WhatsApp
+              {t('contact.whatsapp')}
             </a>
           </Button>
         </div>

@@ -2,18 +2,21 @@ import { useState } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { ThemeToggle } from './ui/theme-toggle';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 import logoHorizontal from '@/assets/logo-horizontal.png';
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navItems = [
-    { label: 'Início', href: '#inicio' },
-    { label: 'Serviços', href: '#servicos' },
-    { label: 'Portfólio', href: '#portfolio' },
-    { label: 'Depoimentos', href: '#depoimentos' },
-    { label: 'Planos', href: '#planos' },
-    { label: 'Contato', href: '#contato' },
+    { label: t('nav.home'), href: '#inicio' },
+    { label: t('nav.services'), href: '#servicos' },
+    { label: t('nav.portfolio'), href: '#portfolio' },
+    { label: t('nav.testimonials'), href: '#depoimentos' },
+    { label: t('nav.plans'), href: '#planos' },
+    { label: t('nav.contact'), href: '#contato' },
   ];
 
   return (
@@ -38,6 +41,7 @@ export const Header = () => {
           </div>
           
           <ThemeToggle />
+          <LanguageSelector />
         </div>
 
         {/* Desktop Navigation - Center */}
@@ -91,7 +95,7 @@ export const Header = () => {
                   className="flex items-center justify-center gap-2"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  WhatsApp
+                  {t('contact.whatsapp')}
                 </a>
               </Button>
             </div>

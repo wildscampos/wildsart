@@ -1,7 +1,9 @@
 import { MessageCircle, Eye } from 'lucide-react';
 import { Button } from './ui/button';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Hero = () => {
+  const { t } = useLanguage();
   return (
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Glow Effects */}
@@ -22,12 +24,12 @@ export const Hero = () => {
         {/* Hero Content */}
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-            Wilds Art's<br />
-            <span className="text-primary">Onde sua visão vira design</span>
+            {t('hero.title')}<br />
+            <span className="text-primary">{t('hero.subtitle')}</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-balance max-w-3xl mx-auto">
-            Artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte e gravação, rótulos e embalagens. Peças prontas para produzir e vender.
+            {t('hero.description')}
           </p>
 
           {/* CTAs */}
@@ -44,7 +46,7 @@ export const Hero = () => {
                 className="flex items-center gap-3"
               >
                 <MessageCircle className="h-5 w-5" />
-                Solicitar orçamento
+                {t('hero.cta.quote')}
               </a>
             </Button>
             
@@ -56,7 +58,7 @@ export const Hero = () => {
             >
               <a href="#portfolio" className="flex items-center gap-3">
                 <Eye className="h-5 w-5" />
-                Ver portfólio
+                {t('hero.cta.portfolio')}
               </a>
             </Button>
           </div>
@@ -65,15 +67,15 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-muted-foreground">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-sm font-medium">23 anos de experiência</span>
+              <span className="text-sm font-medium">{t('hero.trust.experience')}</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-sm font-medium">Arquivos prontos para produção</span>
+              <span className="text-sm font-medium">{t('hero.trust.ready')}</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-sm font-medium">Atendimento ágil</span>
+              <span className="text-sm font-medium">{t('hero.trust.fast')}</span>
             </div>
           </div>
         </div>

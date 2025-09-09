@@ -2,10 +2,51 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 export type Language = 'pt-BR' | 'pt-PT' | 'en' | 'es' | 'fr';
 
+// Função para detectar localização e moeda
+const detectCurrencyAndPrices = () => {
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const locale = navigator.language;
+  
+  // Países europeus que usam Euro
+  const euroCountries = [
+    'Europe/Amsterdam', 'Europe/Andorra', 'Europe/Athens', 'Europe/Berlin',
+    'Europe/Brussels', 'Europe/Madrid', 'Europe/Paris', 'Europe/Rome',
+    'Europe/Vienna', 'Europe/Luxembourg', 'Europe/Dublin', 'Europe/Helsinki',
+    'Europe/Lisbon', 'Europe/Malta', 'Europe/Riga', 'Europe/Tallinn',
+    'Europe/Vilnius', 'Europe/Ljubljana', 'Europe/Bratislava', 'Europe/Zagreb'
+  ];
+  
+  // Estados Unidos
+  const usTimezones = [
+    'America/New_York', 'America/Chicago', 'America/Denver', 'America/Los_Angeles',
+    'America/Phoenix', 'America/Anchorage', 'Pacific/Honolulu', 'America/Detroit',
+    'America/Indiana/Indianapolis'
+  ];
+  
+  if (euroCountries.some(tz => timeZone.includes(tz.split('/')[1])) || locale.startsWith('de') || locale.startsWith('fr') || locale.startsWith('es') || locale.startsWith('it')) {
+    return {
+      currency: '€',
+      prices: ['100', '200', '300', '400']
+    };
+  } else if (usTimezones.some(tz => timeZone.includes(tz)) || locale.includes('en-US')) {
+    return {
+      currency: '$',
+      prices: ['125', '250', '375', '500']
+    };
+  } else {
+    return {
+      currency: 'R$',
+      prices: ['250', '500', '750', '1.000']
+    };
+  }
+};
+
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  currency: string;
+  prices: string[];
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -80,6 +121,25 @@ const translations = {
     'plans.hire': 'Contratar via WhatsApp',
     'plans.comparison': 'Comparativo de Planos',
     'plans.features': 'Recursos',
+    'plans.period': '/mês',
+    'plans.start.description': '4 posts + 4 stories • 1 revisão/peça • prazo até 5 dias úteis',
+    'plans.start.features': '4 posts por mês|4 stories por mês|1 revisão por peça|Prazo de 5 dias úteis',
+    'plans.essencial.description': '8 posts + 8 stories • 1 carrossel (até 7 págs) • 2 revisões/peça • prazo 3 dias úteis',
+    'plans.essencial.features': '8 posts por mês|8 stories por mês|1 carrossel (até 7 págs)|2 revisões por peça|Prazo de 3 dias úteis',
+    'plans.pro.description': '12 posts + 12 stories • 2 carrosséis • 1 motion até 10s • 2 revisões/peça • prazo 48h',
+    'plans.pro.features': '12 posts por mês|12 stories por mês|2 carrosséis|1 motion até 10s|2 revisões por peça|Prazo de 48h',
+    'plans.elite.description': '16 posts + 16 stories • 3 carrosséis • 2 motions até 10s • 3 revisões/peça • prioridade 24–48h',
+    'plans.elite.features': '16 posts por mês|16 stories por mês|3 carrosséis|2 motions até 10s|3 revisões por peça|Prioridade 24-48h',
+    'plans.table.posts': 'Posts/mês',
+    'plans.table.stories': 'Stories/mês',
+    'plans.table.carousels': 'Carrosséis',
+    'plans.table.motion': 'Motion',
+    'plans.table.revisions': 'Revisões/peça',
+    'plans.table.deadline': 'Prazo',
+    'plans.table.deadline_5days': '5 dias',
+    'plans.table.deadline_3days': '3 dias',
+    'plans.table.deadline_48h': '48h',
+    'plans.table.deadline_24_48h': '24-48h',
     'plans.faq.title': 'Perguntas Frequentes',
     'plans.faq.revisions.question': 'Como funcionam as revisões?',
     'plans.faq.revisions.answer': 'Incluídas por peça conforme plano. Mudança de conceito gera nova peça.',
@@ -469,6 +529,7 @@ const translations = {
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<Language>('pt-BR');
+  const { currency, prices } = detectCurrencyAndPrices();
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') as Language;
@@ -500,7 +561,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t, currency, prices }}>
       {children}
     </LanguageContext.Provider>
   );

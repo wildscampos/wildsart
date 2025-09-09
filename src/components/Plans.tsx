@@ -6,43 +6,31 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { StructuredData } from '@/components/StructuredData';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const plans = [
+const planData = [
   {
     name: 'START',
-    price: 'R$ 250',
-    period: '/mês',
-    description: '4 posts + 4 stories • 1 revisão/peça • prazo até 5 dias úteis',
-    features: ['4 posts por mês', '4 stories por mês', '1 revisão por peça', 'Prazo de 5 dias úteis'],
+    priceIndex: 0,
     recommended: false
   },
   {
     name: 'ESSENCIAL',
-    price: 'R$ 500',
-    period: '/mês', 
-    description: '8 posts + 8 stories • 1 carrossel (até 7 págs) • 2 revisões/peça • prazo 3 dias úteis',
-    features: ['8 posts por mês', '8 stories por mês', '1 carrossel (até 7 págs)', '2 revisões por peça', 'Prazo de 3 dias úteis'],
+    priceIndex: 1,
     recommended: false
   },
   {
     name: 'PRO',
-    price: 'R$ 750',
-    period: '/mês',
-    description: '12 posts + 12 stories • 2 carrosséis • 1 motion até 10s • 2 revisões/peça • prazo 48h',
-    features: ['12 posts por mês', '12 stories por mês', '2 carrosséis', '1 motion até 10s', '2 revisões por peça', 'Prazo de 48h'],
+    priceIndex: 2,
     recommended: true
   },
   {
     name: 'ELITE',
-    price: 'R$ 1.000',
-    period: '/mês',
-    description: '16 posts + 16 stories • 3 carrosséis • 2 motions até 10s • 3 revisões/peça • prioridade 24–48h',
-    features: ['16 posts por mês', '16 stories por mês', '3 carrosséis', '2 motions até 10s', '3 revisões por peça', 'Prioridade 24-48h'],
+    priceIndex: 3,
     recommended: false
   }
 ];
 
 export const Plans = () => {
-  const { t } = useLanguage();
+  const { t, currency, prices } = useLanguage();
 
   const faqs = [
     {
@@ -76,7 +64,7 @@ export const Plans = () => {
 
         {/* Plans Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-20">
-          {plans.map((plan, index) => (
+          {planData.map((plan, index) => (
             <Card 
               key={index} 
               className={`relative ${plan.recommended ? 'border-primary shadow-lg scale-105' : 'border-border'} transition-all duration-300 hover:shadow-lg`}
@@ -92,20 +80,20 @@ export const Plans = () => {
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
                 <div className="flex items-baseline justify-center space-x-1">
-                  <span className="text-3xl font-bold text-primary">{plan.price}</span>
-                  <span className="text-muted-foreground">{plan.period}</span>
+                  <span className="text-3xl font-bold text-primary">{currency} {prices[plan.priceIndex]}</span>
+                  <span className="text-muted-foreground">{t('plans.period')}</span>
                 </div>
                 <CardDescription className="text-sm leading-relaxed">
-                  {plan.description}
+                  {t(`plans.${plan.name.toLowerCase()}.description`)}
                 </CardDescription>
               </CardHeader>
               
               <CardContent className="space-y-4">
                 <ul className="space-y-2">
-                  {plan.features.map((feature, featureIndex) => (
+                  {t(`plans.${plan.name.toLowerCase()}.features`).split('|').map((feature: string, featureIndex: number) => (
                     <li key={featureIndex} className="flex items-center text-sm">
                       <Check className="h-4 w-4 text-primary mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.trim()}
                     </li>
                   ))}
                 </ul>
@@ -148,46 +136,46 @@ export const Plans = () => {
               </thead>
               <tbody>
                 <tr className="border-b border-border">
-                  <td className="p-4">Posts/mês</td>
+                  <td className="p-4">{t('plans.table.posts')}</td>
                   <td className="text-center p-4">4</td>
                   <td className="text-center p-4">8</td>
                   <td className="text-center p-4 bg-primary/5">12</td>
                   <td className="text-center p-4">16</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="p-4">Stories/mês</td>
+                  <td className="p-4">{t('plans.table.stories')}</td>
                   <td className="text-center p-4">4</td>
                   <td className="text-center p-4">8</td>
                   <td className="text-center p-4 bg-primary/5">12</td>
                   <td className="text-center p-4">16</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="p-4">Carrosséis</td>
+                  <td className="p-4">{t('plans.table.carousels')}</td>
                   <td className="text-center p-4">-</td>
                   <td className="text-center p-4">1</td>
                   <td className="text-center p-4 bg-primary/5">2</td>
                   <td className="text-center p-4">3</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="p-4">Motion</td>
+                  <td className="p-4">{t('plans.table.motion')}</td>
                   <td className="text-center p-4">-</td>
                   <td className="text-center p-4">-</td>
                   <td className="text-center p-4 bg-primary/5">1</td>
                   <td className="text-center p-4">2</td>
                 </tr>
                 <tr className="border-b border-border">
-                  <td className="p-4">Revisões/peça</td>
+                  <td className="p-4">{t('plans.table.revisions')}</td>
                   <td className="text-center p-4">1</td>
                   <td className="text-center p-4">2</td>
                   <td className="text-center p-4 bg-primary/5">2</td>
                   <td className="text-center p-4">3</td>
                 </tr>
                 <tr>
-                  <td className="p-4">Prazo</td>
-                  <td className="text-center p-4">5 dias</td>
-                  <td className="text-center p-4">3 dias</td>
-                  <td className="text-center p-4 bg-primary/5">48h</td>
-                  <td className="text-center p-4">24-48h</td>
+                  <td className="p-4">{t('plans.table.deadline')}</td>
+                  <td className="text-center p-4">{t('plans.table.deadline_5days')}</td>
+                  <td className="text-center p-4">{t('plans.table.deadline_3days')}</td>
+                  <td className="text-center p-4 bg-primary/5">{t('plans.table.deadline_48h')}</td>
+                  <td className="text-center p-4">{t('plans.table.deadline_24_48h')}</td>
                 </tr>
               </tbody>
             </table>

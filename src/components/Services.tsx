@@ -9,48 +9,51 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
-
-const services = [
-  {
-    icon: Instagram,
-    title: 'Artes para redes sociais',
-    description: 'Posts, stories, carrosséis e motion curto; pauta, copy e direção de arte com foco em conversão.',
-  },
-  {
-    icon: Palette,
-    title: 'Identidade visual',
-    description: 'Logo, paleta, tipografia e aplicações que posicionam sua marca.',
-  },
-  {
-    icon: FileText,
-    title: 'Manual de marca',
-    description: 'Regras de uso, grids, cores, tipografia, tom de voz e exemplos de aplicação.',
-  },
-  {
-    icon: Shapes,
-    title: 'Vetorização',
-    description: 'Logos, ilustrações e produtos com traços limpos e fiéis.',
-  },
-  {
-    icon: Scissors,
-    title: 'Vetores para corte e gravação',
-    description: 'Arquivos otimizados para laser/router (MDF, acrílico, metal), com tolerâncias e encaixes definidos conforme o projeto.',
-  },
-  {
-    icon: Package,
-    title: 'Rótulos e embalagens',
-    description: 'Criação de arte para rótulos e embalagens, com design funcional e pronto para impressão.',
-  },
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Services = () => {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: Instagram,
+      titleKey: 'services.social.title',
+      descriptionKey: 'services.social.description',
+    },
+    {
+      icon: Palette,
+      titleKey: 'services.identity.title',
+      descriptionKey: 'services.identity.description',
+    },
+    {
+      icon: FileText,
+      titleKey: 'services.manual.title',
+      descriptionKey: 'services.manual.description',
+    },
+    {
+      icon: Shapes,
+      titleKey: 'services.vectorization.title',
+      descriptionKey: 'services.vectorization.description',
+    },
+    {
+      icon: Scissors,
+      titleKey: 'services.cutting.title',
+      descriptionKey: 'services.cutting.description',
+    },
+    {
+      icon: Package,
+      titleKey: 'services.packaging.title',
+      descriptionKey: 'services.packaging.description',
+    },
+  ];
+
   return (
     <section id="servicos" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Serviços</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('services.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Soluções completas de design para elevar sua marca e negócio
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -66,11 +69,11 @@ export const Services = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                     <IconComponent className="h-6 w-6 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl">{t(service.titleKey)}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base leading-relaxed mb-6">
-                    {service.description}
+                    {t(service.descriptionKey)}
                   </CardDescription>
                   <Button 
                     variant="outline" 
@@ -85,7 +88,7 @@ export const Services = () => {
                       className="flex items-center justify-center gap-2"
                     >
                       <MessageCircle className="h-4 w-4" />
-                      Pedir orçamento
+                      {t('services.quote')}
                     </a>
                   </Button>
                 </CardContent>

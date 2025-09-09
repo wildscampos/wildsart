@@ -1,6 +1,8 @@
 import logoHorizontal from '@/assets/logo-horizontal.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -18,14 +20,13 @@ export const Footer = () => {
 
           {/* Description */}
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Wilds Art's — artes para redes sociais, identidade visual e manual de marca. 
-            Também vetorização, vetores para corte e gravação (MDF, acrílico, metal) e rótulos/embalagens.
+            {t('footer.description')}
           </p>
 
           {/* Copyright */}
           <div className="pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Wilds Art's. Todos os direitos reservados.
+              © {currentYear} Wilds Art's. {t('footer.rights')}
             </p>
           </div>
         </div>

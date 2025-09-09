@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { StructuredData } from '@/components/StructuredData';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const plans = [
   {
@@ -40,35 +41,36 @@ const plans = [
   }
 ];
 
-const faqs = [
-  {
-    question: 'Como funcionam as revisões?',
-    answer: 'Incluídas por peça conforme plano. Mudança de conceito gera nova peça.'
-  },
-  {
-    question: 'Quais formatos de entrega?',
-    answer: 'PNG, JPG, PDF para posts. MP4 para stories e motions.'
-  },
-  {
-    question: 'Posso escolher as datas de postagem?',
-    answer: 'Sim, você define as datas e nós criamos o conteúdo seguindo seu cronograma.'
-  },
-  {
-    question: 'Prazos de entrega?',
-    answer: 'START 5 dias úteis; ESSENCIAL 3 dias úteis; PRO 48h; ELITE 24–48h (prioridade).'
-  }
-];
-
 export const Plans = () => {
+  const { t } = useLanguage();
+
+  const faqs = [
+    {
+      question: t('plans.faq.revisions.question'),
+      answer: t('plans.faq.revisions.answer')
+    },
+    {
+      question: t('plans.faq.formats.question'),
+      answer: t('plans.faq.formats.answer')
+    },
+    {
+      question: t('plans.faq.dates.question'),
+      answer: t('plans.faq.dates.answer')
+    },
+    {
+      question: t('plans.faq.deadlines.question'),
+      answer: t('plans.faq.deadlines.answer')
+    }
+  ];
   return (
     <section id="planos" className="py-20">
       <StructuredData type="faqPage" data={faqs} />
       <div className="container mx-auto px-4">
         {/* Hero */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Design para Redes Sociais</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('plans.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Conteúdo visual profissional e constante para suas redes sociais.
+            {t('plans.subtitle')}
           </p>
         </div>
 
@@ -82,7 +84,7 @@ export const Plans = () => {
               {plan.recommended && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <Badge className="bg-primary text-primary-foreground px-4 py-1">
-                    Recomendado
+                    {t('plans.recommended')}
                   </Badge>
                 </div>
               )}
@@ -121,7 +123,7 @@ export const Plans = () => {
                       className="flex items-center justify-center gap-2"
                     >
                       <MessageCircle className="h-4 w-4" />
-                      Contratar via WhatsApp
+                      {t('plans.hire')}
                     </a>
                   </Button>
                 </div>
@@ -132,12 +134,12 @@ export const Plans = () => {
 
         {/* Comparison Table */}
         <div className="py-12 mb-20">
-          <h3 className="text-2xl font-bold text-center mb-8">Comparativo de Planos</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">{t('plans.comparison')}</h3>
           <div className="overflow-x-auto">
             <table className="w-full max-w-4xl mx-auto bg-card rounded-lg border border-border">
               <thead>
                 <tr className="border-b border-border">
-                  <th className="text-left p-4 font-semibold">Recursos</th>
+                  <th className="text-left p-4 font-semibold">{t('plans.features')}</th>
                   <th className="text-center p-4 font-semibold">START</th>
                   <th className="text-center p-4 font-semibold">ESSENCIAL</th>
                   <th className="text-center p-4 font-semibold bg-primary/5">PRO</th>
@@ -194,7 +196,7 @@ export const Plans = () => {
 
         {/* FAQ */}
         <div className="py-12 mb-20 bg-muted/30 rounded-2xl px-8">
-          <h3 className="text-2xl font-bold text-center mb-8">Perguntas Frequentes</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">{t('plans.faq.title')}</h3>
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible>
               {faqs.map((faq, index) => (
@@ -213,12 +215,10 @@ export const Plans = () => {
 
         {/* Terms */}
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6">Termos Resumidos</h3>
+          <h3 className="text-2xl font-bold mb-6">{t('plans.terms.title')}</h3>
           <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground mb-8">
             <p>
-              Vigência mensal; pagamento antecipado; janela de revisões até 7 dias após entrega; 
-              cancelamento com 15 dias (sem reembolso do mês corrente); uso comercial liberado; 
-              banco de imagens premium pode ter custo adicional.
+              {t('plans.terms.content')}
             </p>
           </div>
           
@@ -234,7 +234,7 @@ export const Plans = () => {
                 className="flex items-center justify-center gap-2"
               >
                 <MessageCircle className="h-5 w-5" />
-                Assinar agora
+                {t('plans.subscribe')}
               </a>
             </Button>
           </div>

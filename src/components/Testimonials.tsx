@@ -1,4 +1,5 @@
 import { Card, CardContent } from './ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -42,13 +43,15 @@ const testimonials = [
 ];
 
 export const Testimonials = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="depoimentos" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Depoimentos</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('testimonials.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            O que nossos clientes dizem sobre nosso trabalho
+            {t('testimonials.subtitle')}
           </p>
         </div>
 

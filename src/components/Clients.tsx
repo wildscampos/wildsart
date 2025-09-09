@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useLanguage } from '@/contexts/LanguageContext';
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
@@ -46,6 +47,7 @@ const clients = [
 ];
 
 export const Clients = () => {
+  const { t } = useLanguage();
   const renderClientCard = (client: typeof clients[0], index: number) => {
     const cardContent = (
       <>
@@ -96,10 +98,10 @@ export const Clients = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Empresas que confiam em nosso trabalho
+            {t('clients.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Conheça algumas das empresas que já transformaram sua identidade visual conosco
+            {t('clients.subtitle')}
           </p>
         </div>
 

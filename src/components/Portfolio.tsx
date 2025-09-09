@@ -1,6 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // Import portfolio images
 import portfolioSocial1 from '@/assets/portfolio-social-1.jpg';
@@ -20,13 +21,15 @@ const portfolioItems = [
 ];
 
 export const Portfolio = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="portfolio" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfólio</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('portfolio.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Conheça alguns dos nossos trabalhos e projetos realizados
+            {t('portfolio.subtitle')}
           </p>
         </div>
 
@@ -63,7 +66,7 @@ export const Portfolio = () => {
               className="flex items-center gap-3"
             >
               <MessageCircle className="h-5 w-5" />
-              Quero algo assim
+              {t('portfolio.cta')}
             </a>
           </Button>
         </div>

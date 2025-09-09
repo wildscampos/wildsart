@@ -12,12 +12,12 @@ import portfolioManual1 from '@/assets/portfolio-manual-1.jpg';
 import portfolioMotion1 from '@/assets/portfolio-motion-1.jpg';
 
 const portfolioItems = [
-  { image: portfolioSocial1, alt: 'Projeto Wilds Art\'s - artes para redes sociais' },
-  { image: portfolioIdentity1, alt: 'Projeto Wilds Art\'s - identidade visual' },
-  { image: portfolioVector1, alt: 'Projeto Wilds Art\'s - vetorização' },
-  { image: portfolioPackaging1, alt: 'Projeto Wilds Art\'s - rótulos e embalagens' },
-  { image: portfolioManual1, alt: 'Projeto Wilds Art\'s - manual de marca' },
-  { image: portfolioMotion1, alt: 'Projeto Wilds Art\'s - motion graphics' },
+  { image: portfolioSocial1, key: 'social' },
+  { image: portfolioIdentity1, key: 'identity' },
+  { image: portfolioVector1, key: 'vector' },
+  { image: portfolioPackaging1, key: 'packaging' },
+  { image: portfolioManual1, key: 'manual' },
+  { image: portfolioMotion1, key: 'motion' },
 ];
 
 export const Portfolio = () => {
@@ -40,13 +40,13 @@ export const Portfolio = () => {
                 <div className="aspect-square overflow-hidden">
                   <img
                     src={item.image}
-                    alt={item.alt}
+                    alt={t(`portfolio.projects.${item.key}`)}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
                 </div>
                 <div className="p-4">
-                  <p className="text-sm text-muted-foreground">{item.alt}</p>
+                  <p className="text-sm text-muted-foreground">{t(`portfolio.projects.${item.key}`)}</p>
                 </div>
               </CardContent>
             </Card>

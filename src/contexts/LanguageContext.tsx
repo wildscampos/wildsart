@@ -109,6 +109,12 @@ const translations = {
     'portfolio.title': 'Portfólio',
     'portfolio.subtitle': 'Conheça alguns dos nossos trabalhos e projetos realizados',
     'portfolio.cta': 'Quero algo assim',
+    'portfolio.projects.social': 'Projeto Wilds Art\'s - artes para redes sociais',
+    'portfolio.projects.identity': 'Projeto Wilds Art\'s - identidade visual', 
+    'portfolio.projects.vector': 'Projeto Wilds Art\'s - vetorização',
+    'portfolio.projects.packaging': 'Projeto Wilds Art\'s - rótulos e embalagens',
+    'portfolio.projects.manual': 'Projeto Wilds Art\'s - manual de marca',
+    'portfolio.projects.motion': 'Projeto Wilds Art\'s - motion graphics',
     
     // Testimonials
     'testimonials.title': 'Depoimentos',
@@ -219,6 +225,12 @@ const translations = {
     'portfolio.title': 'Portfólio',
     'portfolio.subtitle': 'Conheça alguns dos nossos trabalhos e projectos realizados',
     'portfolio.cta': 'Quero algo assim',
+    'portfolio.projects.social': 'Projeto Wilds Art\'s - artes para redes sociais',
+    'portfolio.projects.identity': 'Projeto Wilds Art\'s - identidade visual',
+    'portfolio.projects.vector': 'Projeto Wilds Art\'s - vetorização',
+    'portfolio.projects.packaging': 'Projeto Wilds Art\'s - rótulos e embalagens', 
+    'portfolio.projects.manual': 'Projeto Wilds Art\'s - manual de marca',
+    'portfolio.projects.motion': 'Projeto Wilds Art\'s - motion graphics',
     
     // Testimonials
     'testimonials.title': 'Testemunhos',
@@ -310,6 +322,12 @@ const translations = {
     'portfolio.title': 'Portfolio',
     'portfolio.subtitle': 'Discover some of our completed works and projects',
     'portfolio.cta': 'I want something like this',
+    'portfolio.projects.social': 'Wilds Art\'s Project - social media designs',
+    'portfolio.projects.identity': 'Wilds Art\'s Project - visual identity',
+    'portfolio.projects.vector': 'Wilds Art\'s Project - vectorization', 
+    'portfolio.projects.packaging': 'Wilds Art\'s Project - labels and packaging',
+    'portfolio.projects.manual': 'Wilds Art\'s Project - brand manual',
+    'portfolio.projects.motion': 'Wilds Art\'s Project - motion graphics',
     
     // Testimonials
     'testimonials.title': 'Testimonials',
@@ -420,6 +438,12 @@ const translations = {
     'portfolio.title': 'Portafolio',
     'portfolio.subtitle': 'Conoce algunos de nuestros trabajos y proyectos realizados',
     'portfolio.cta': 'Quiero algo así',
+    'portfolio.projects.social': 'Proyecto Wilds Art\'s - diseños para redes sociales',
+    'portfolio.projects.identity': 'Proyecto Wilds Art\'s - identidad visual',
+    'portfolio.projects.vector': 'Proyecto Wilds Art\'s - vectorización',
+    'portfolio.projects.packaging': 'Proyecto Wilds Art\'s - etiquetas y empaques', 
+    'portfolio.projects.manual': 'Proyecto Wilds Art\'s - manual de marca',
+    'portfolio.projects.motion': 'Proyecto Wilds Art\'s - motion graphics',
     
     // Testimonials
     'testimonials.title': 'Testimonios',
@@ -530,6 +554,12 @@ const translations = {
     'portfolio.title': 'Portfolio',
     'portfolio.subtitle': 'Découvrez quelques-uns de nos travaux et projets réalisés',
     'portfolio.cta': 'Je veux quelque chose comme ça',
+    'portfolio.projects.social': 'Projet Wilds Art\'s - créations pour réseaux sociaux',
+    'portfolio.projects.identity': 'Projet Wilds Art\'s - identité visuelle',
+    'portfolio.projects.vector': 'Projet Wilds Art\'s - vectorisation',
+    'portfolio.projects.packaging': 'Projet Wilds Art\'s - étiquettes et emballages',
+    'portfolio.projects.manual': 'Projet Wilds Art\'s - manuel de marque', 
+    'portfolio.projects.motion': 'Projet Wilds Art\'s - motion graphics',
     
     // Testimonials
     'testimonials.title': 'Témoignages',

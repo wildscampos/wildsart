@@ -44,7 +44,7 @@ const detectCurrencyAndPrices = () => {
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string) => any;
   currency: string;
   prices: string[];
 }
@@ -119,6 +119,38 @@ const translations = {
     // Testimonials
     'testimonials.title': 'Depoimentos',
     'testimonials.subtitle': 'O que nossos clientes dizem sobre nosso trabalho',
+    'testimonials.items': [
+      {
+        text: "Trabalho impecável! As peças chegaram prontas para produção, sem necessidade de ajustes. A qualidade técnica é excelente.",
+        author: "Waldir",
+        company: "Cia da Fé"
+      },
+      {
+        text: "Entrega sempre no prazo e comunicação clara. Os arquivos são perfeitos para estamparia digital, facilitam muito nosso processo.",
+        author: "Neiva",
+        company: "Stamp|Cia"
+      },
+      {
+        text: "Profissionalismo de primeira! O design da nossa marca ficou moderno e impactante. Recomendo sem dúvidas.",
+        author: "Leandro",
+        company: "LuminaBox"
+      },
+      {
+        text: "Criatividade e atenção aos detalhes que fazem a diferença. Cada peça é pensada com carinho e técnica.",
+        author: "Sandra",
+        company: "Mimos da Drika"
+      },
+      {
+        text: "Identidade visual forte e marcante! O resultado superou nossas expectativas e fortaleceu nossa presença no mercado.",
+        author: "Kleber",
+        company: "TransKav"
+      },
+      {
+        text: "Design acolhedor que traduz perfeitamente o conceito da nossa cantina. Ficamos muito satisfeitas com o resultado!",
+        author: "Izilda",
+        company: "Cantina das Marias"
+      }
+    ],
     
     // Plans
     'plans.title': 'Design para Redes Sociais',
@@ -235,6 +267,38 @@ const translations = {
     // Testimonials
     'testimonials.title': 'Testemunhos',
     'testimonials.subtitle': 'O que os nossos clientes dizem sobre o nosso trabalho',
+    'testimonials.items': [
+      {
+        text: "Trabalho impecável! As peças chegaram prontas para produção, sem necessidade de ajustes. A qualidade técnica é excelente.",
+        author: "Waldir",
+        company: "Cia da Fé"
+      },
+      {
+        text: "Entrega sempre no prazo e comunicação clara. Os arquivos são perfeitos para estamparia digital, facilitam muito nosso processo.",
+        author: "Neiva",
+        company: "Stamp|Cia"
+      },
+      {
+        text: "Profissionalismo de primeira! O design da nossa marca ficou moderno e impactante. Recomendo sem dúvidas.",
+        author: "Leandro",
+        company: "LuminaBox"
+      },
+      {
+        text: "Criatividade e atenção aos detalhes que fazem a diferença. Cada peça é pensada com carinho e técnica.",
+        author: "Sandra",
+        company: "Mimos da Drika"
+      },
+      {
+        text: "Identidade visual forte e marcante! O resultado superou nossas expectativas e fortaleceu nossa presença no mercado.",
+        author: "Kleber",
+        company: "TransKav"
+      },
+      {
+        text: "Design acolhedor que traduz perfeitamente o conceito da nossa cantina. Ficamos muito satisfeitas com o resultado!",
+        author: "Izilda",
+        company: "Cantina das Marias"
+      }
+    ],
     
     // Plans
     'plans.title': 'Design para Redes Sociais',
@@ -332,6 +396,38 @@ const translations = {
     // Testimonials
     'testimonials.title': 'Testimonials',
     'testimonials.subtitle': 'What our clients say about our work',
+    'testimonials.items': [
+      {
+        text: "Impeccable work! The pieces arrived ready for production, no adjustments needed. The technical quality is excellent.",
+        author: "Waldir",
+        company: "Cia da Fé"
+      },
+      {
+        text: "Always on time delivery and clear communication. The files are perfect for digital printing, they make our process much easier.",
+        author: "Neiva",
+        company: "Stamp|Cia"
+      },
+      {
+        text: "First-class professionalism! Our brand design turned out modern and impactful. I recommend without a doubt.",
+        author: "Leandro",
+        company: "LuminaBox"
+      },
+      {
+        text: "Creativity and attention to detail that make the difference. Each piece is designed with care and technique.",
+        author: "Sandra",
+        company: "Mimos da Drika"
+      },
+      {
+        text: "Strong and striking visual identity! The result exceeded our expectations and strengthened our market presence.",
+        author: "Kleber",
+        company: "TransKav"
+      },
+      {
+        text: "Welcoming design that perfectly translates our cafeteria concept. We were very satisfied with the result!",
+        author: "Izilda",
+        company: "Cantina das Marias"
+      }
+    ],
     
     // Plans
     'plans.title': 'Social Media Design',
@@ -448,6 +544,38 @@ const translations = {
     // Testimonials
     'testimonials.title': 'Testimonios',
     'testimonials.subtitle': 'Lo que nuestros clientes dicen sobre nuestro trabajo',
+    'testimonials.items': [
+      {
+        text: "¡Trabajo impecable! Las piezas llegaron listas para producción, sin necesidad de ajustes. La calidad técnica es excelente.",
+        author: "Waldir",
+        company: "Cia da Fé"
+      },
+      {
+        text: "Entrega siempre a tiempo y comunicación clara. Los archivos son perfectos para estampado digital, facilitan mucho nuestro proceso.",
+        author: "Neiva",
+        company: "Stamp|Cia"
+      },
+      {
+        text: "¡Profesionalismo de primera! El diseño de nuestra marca quedó moderno e impactante. Lo recomiendo sin dudas.",
+        author: "Leandro",
+        company: "LuminaBox"
+      },
+      {
+        text: "Creatividad y atención a los detalles que marcan la diferencia. Cada pieza está pensada con cariño y técnica.",
+        author: "Sandra",
+        company: "Mimos da Drika"
+      },
+      {
+        text: "¡Identidad visual fuerte y llamativa! El resultado superó nuestras expectativas y fortaleció nuestra presencia en el mercado.",
+        author: "Kleber",
+        company: "TransKav"
+      },
+      {
+        text: "Diseño acogedor que traduce perfectamente el concepto de nuestra cantina. ¡Quedamos muy satisfechas con el resultado!",
+        author: "Izilda",
+        company: "Cantina das Marias"
+      }
+    ],
     
     // Plans
     'plans.title': 'Diseño para Redes Sociales',
@@ -564,6 +692,38 @@ const translations = {
     // Testimonials
     'testimonials.title': 'Témoignages',
     'testimonials.subtitle': 'Ce que nos clients disent de notre travail',
+    'testimonials.items': [
+      {
+        text: "Travail impeccable ! Les pièces sont arrivées prêtes pour la production, sans besoin d'ajustements. La qualité technique est excellente.",
+        author: "Waldir",
+        company: "Cia da Fé"
+      },
+      {
+        text: "Livraison toujours à temps et communication claire. Les fichiers sont parfaits pour l'impression numérique, ils facilitent beaucoup notre processus.",
+        author: "Neiva",
+        company: "Stamp|Cia"
+      },
+      {
+        text: "Professionnalisme de première classe ! Le design de notre marque est devenu moderne et percutant. Je recommande sans hésitation.",
+        author: "Leandro",
+        company: "LuminaBox"
+      },
+      {
+        text: "Créativité et attention aux détails qui font la différence. Chaque pièce est conçue avec soin et technique.",
+        author: "Sandra",
+        company: "Mimos da Drika"
+      },
+      {
+        text: "Identité visuelle forte et marquante ! Le résultat a dépassé nos attentes et renforcé notre présence sur le marché.",
+        author: "Kleber",
+        company: "TransKav"
+      },
+      {
+        text: "Design accueillant qui traduit parfaitement le concept de notre cantine. Nous avons été très satisfaites du résultat !",
+        author: "Izilda",
+        company: "Cantina das Marias"
+      }
+    ],
     
     // Plans
     'plans.title': 'Design pour Réseaux Sociaux',
@@ -643,7 +803,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     document.title = titles[lang];
   };
 
-  const t = (key: string): string => {
+  const t = (key: string): any => {
     return translations[language][key] || key;
   };
 

@@ -9,41 +9,10 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-const testimonials = [
-  {
-    text: "Trabalho impecável! As peças chegaram prontas para produção, sem necessidade de ajustes. A qualidade técnica é excelente.",
-    author: "Waldir",
-    company: "Cia da Fé"
-  },
-  {
-    text: "Entrega sempre no prazo e comunicação clara. Os arquivos são perfeitos para estamparia digital, facilitam muito nosso processo.",
-    author: "Neiva",
-    company: "Stamp|Cia"
-  },
-  {
-    text: "Profissionalismo de primeira! O design da nossa marca ficou moderno e impactante. Recomendo sem dúvidas.",
-    author: "Leandro",
-    company: "LuminaBox"
-  },
-  {
-    text: "Criatividade e atenção aos detalhes que fazem a diferença. Cada peça é pensada com carinho e técnica.",
-    author: "Sandra",
-    company: "Mimos da Drika"
-  },
-  {
-    text: "Identidade visual forte e marcante! O resultado superou nossas expectativas e fortaleceu nossa presença no mercado.",
-    author: "Kleber",
-    company: "TransKav"
-  },
-  {
-    text: "Design acolhedor que traduz perfeitamente o conceito da nossa cantina. Ficamos muito satisfeitas com o resultado!",
-    author: "Izilda",
-    company: "Cantina das Marias"
-  }
-];
 
 export const Testimonials = () => {
   const { t } = useLanguage();
+  const testimonials = t('testimonials.items');
 
   return (
     <section id="depoimentos" className="py-20">

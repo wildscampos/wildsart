@@ -23,6 +23,28 @@ export const Footer = () => {
             {t('footer.description')}
           </p>
 
+          {/* Navigation Links */}
+          <nav className="flex flex-wrap justify-center gap-6 text-sm">
+            <a href="#inicio" className="text-muted-foreground hover:text-primary transition-colors">
+              {t('nav.home')}
+            </a>
+            <a href="#servicos" className="text-muted-foreground hover:text-primary transition-colors">
+              {t('nav.services')}
+            </a>
+            <a href="#planos" className="text-muted-foreground hover:text-primary transition-colors">
+              {t('nav.plans')}
+            </a>
+            <a href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors">
+              {t('nav.portfolio')}
+            </a>
+            <a href="#depoimentos" className="text-muted-foreground hover:text-primary transition-colors">
+              {t('nav.testimonials')}
+            </a>
+            <a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">
+              {t('nav.contact')}
+            </a>
+          </nav>
+
           {/* Copyright */}
           <div className="pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">

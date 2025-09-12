@@ -86,6 +86,9 @@ export const Plans = () => {
                 <CardDescription className="text-sm leading-relaxed">
                   {t(`plans.${plan.name.toLowerCase()}.description`)}
                 </CardDescription>
+                <p className="text-xs text-primary font-medium italic mt-2">
+                  {t(`plans.${plan.name.toLowerCase()}.benefit`)}
+                </p>
               </CardHeader>
               
               <CardContent className="space-y-4">

@@ -8,9 +8,14 @@ export const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">{t('about.title')}</h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            {t('about.description')}
-          </p>
+          <div className="text-xl text-muted-foreground leading-relaxed">
+            {t('about.description').split(' • ').map((item, index) => (
+              <div key={index} className="flex items-center justify-center mb-3">
+                <div className="w-2 h-2 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                <span>{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -62,10 +62,10 @@ const translations = {
     'nav.contact': 'Contato',
     
     // Hero Section
-    'hero.title': 'Wilds Art\'s',
-    'hero.subtitle': 'Onde sua visão vira design',
+    'hero.title': 'Design Gráfico & Identidade Visual Profissional',
+    'hero.subtitle': 'Transforme sua marca com design estratégico e de alta qualidade',
     'hero.description': 'Artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte e gravação, rótulos e embalagens. Peças prontas para produzir e vender.',
-    'hero.cta.quote': 'Solicitar orçamento',
+    'hero.cta.quote': 'Falar agora com a Wilds Art\'s',
     'hero.cta.portfolio': 'Ver portfólio',
     'hero.trust.experience': '23 anos de experiência',
     'hero.trust.ready': 'Arquivos prontos para produção',
@@ -85,11 +85,11 @@ const translations = {
     'whatsapp.message': 'Olá! Gostaria de saber mais sobre os serviços da Wilds Art\'s.',
     
     // About
-    'about.title': 'Quem Somos',
-    'about.description': 'A Wilds Art\'s nasce com 23 anos de experiência em design, adquirida em empresas de comunicação visual, corte à laser, estamparia e confecção. Unimos precisão técnica e linguagem orientada a resultado, do post ao arquivo de produção.',
+    'about.title': 'Por que escolher a Wilds Art\'s?',
+    'about.description': '23 anos de experiência em design gráfico e identidade visual • Precisão técnica e criatividade em cada projeto • Do post para redes sociais ao arquivo de produção • Artes prontas para impressão ou corte a laser • Entrega rápida e profissionalismo garantido',
     
     // Services
-    'services.title': 'Serviços',
+    'services.title': 'Design Gráfico Profissional - Pacotes Personalizados',
     'services.subtitle': 'Soluções completas de design para elevar sua marca e negócio',
     'services.social.title': 'Artes para redes sociais',
     'services.social.description': 'Posts, stories, carrosséis e motion curto; pauta, copy e direção de arte com foco em conversão.',
@@ -103,7 +103,7 @@ const translations = {
     'services.cutting.description': 'Arquivos otimizados para laser/router (MDF, acrílico, metal), com tolerâncias e encaixes definidos conforme o projeto.',
     'services.packaging.title': 'Rótulos e embalagens',
     'services.packaging.description': 'Criação de arte para rótulos e embalagens, com design funcional e pronto para impressão.',
-    'services.quote': 'Pedir orçamento',
+    'services.quote': 'Solicitar orçamento deste serviço',
     
     // Portfolio
     'portfolio.title': 'Portfólio',
@@ -117,7 +117,7 @@ const translations = {
     'portfolio.projects.motion': 'Projeto Wilds Art\'s - motion graphics',
     
     // Testimonials
-    'testimonials.title': 'Depoimentos',
+    'testimonials.title': 'Veja como ajudamos empresas reais a crescer com design',
     'testimonials.subtitle': 'O que nossos clientes dizem sobre nosso trabalho',
     'testimonials.items': [
       {
@@ -153,20 +153,24 @@ const translations = {
     ],
     
     // Plans
-    'plans.title': 'Design para Redes Sociais',
-    'plans.subtitle': 'Conteúdo visual profissional e constante para suas redes sociais.',
+    'plans.title': 'Planos de Design Gráfico - Pacotes Mensais',
+    'plans.subtitle': 'Escolha o plano ideal para suas necessidades',
     'plans.recommended': 'Recomendado',
-    'plans.hire': 'Contratar via WhatsApp',
+    'plans.hire': 'Quero este plano no WhatsApp',
     'plans.comparison': 'Comparativo de Planos',
     'plans.features': 'Recursos',
     'plans.period': '/mês',
     'plans.start.description': '4 posts + 4 stories • 1 revisão/peça • prazo até 5 dias úteis',
+    'plans.start.benefit': 'Presença profissional nas redes sociais sem complicação',
     'plans.start.features': '4 posts por mês|4 stories por mês|1 revisão por peça|Prazo de 5 dias úteis',
     'plans.essencial.description': '8 posts + 8 stories • 1 carrossel (até 7 págs) • 2 revisões/peça • prazo 3 dias úteis',
+    'plans.essencial.benefit': 'Mantenha sua marca sempre atual e relevante',
     'plans.essencial.features': '8 posts por mês|8 stories por mês|1 carrossel (até 7 págs)|2 revisões por peça|Prazo de 3 dias úteis',
     'plans.pro.description': '12 posts + 12 stories • 2 carrosséis • 1 motion até 10s • 2 revisões/peça • prazo 48h',
+    'plans.pro.benefit': 'Entrega em até 24h para manter sua marca sempre atual',
     'plans.pro.features': '12 posts por mês|12 stories por mês|2 carrosséis|1 motion até 10s|2 revisões por peça|Prazo de 48h',
     'plans.elite.description': '16 posts + 16 stories • 3 carrosséis • 2 motions até 10s • 3 revisões/peça • prioridade 24–48h',
+    'plans.elite.benefit': 'Prioridade máxima para demandas urgentes com designer dedicado',
     'plans.elite.features': '16 posts por mês|16 stories por mês|3 carrosséis|2 motions até 10s|3 revisões por peça|Prioridade 24-48h',
     'plans.table.posts': 'Posts/mês',
     'plans.table.stories': 'Stories/mês',

@@ -5,7 +5,9 @@ import {
   Shapes, 
   Scissors, 
   Package,
-  MessageCircle
+  MessageCircle,
+  Paintbrush,
+  MonitorPlay
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -44,6 +46,16 @@ export const Services = () => {
       icon: Package,
       titleKey: 'services.packaging.title',
       descriptionKey: 'services.packaging.description',
+    },
+    {
+      icon: Paintbrush,
+      titleKey: 'services.silkscreen.title',
+      descriptionKey: 'services.silkscreen.description',
+    },
+    {
+      icon: MonitorPlay,
+      titleKey: 'services.landingpage.title',
+      descriptionKey: 'services.landingpage.description',
     },
   ];
 

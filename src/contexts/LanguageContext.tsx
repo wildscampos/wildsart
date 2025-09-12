@@ -103,6 +103,10 @@ const translations = {
     'services.cutting.description': 'Arquivos otimizados para laser/router (MDF, acrílico, metal), com tolerâncias e encaixes definidos conforme o projeto.',
     'services.packaging.title': 'Rótulos e embalagens',
     'services.packaging.description': 'Criação de arte para rótulos e embalagens, com design funcional e pronto para impressão.',
+    'services.silkscreen.title': 'Arte para Silk-Screen',
+    'services.silkscreen.description': 'Criação de artes otimizadas para impressão em serigrafia, com cores separadas e especificações técnicas precisas.',
+    'services.landingpage.title': 'Landing Page',
+    'services.landingpage.description': 'Páginas de conversão profissionais com design responsivo e foco em resultados.',
     'services.quote': 'Solicitar orçamento deste serviço',
     
     // Portfolio
@@ -255,6 +259,10 @@ const translations = {
     'services.cutting.description': 'Ficheiros optimizados para laser/router (MDF, acrílico, metal), com tolerâncias e encaixes definidos conforme o projecto.',
     'services.packaging.title': 'Rótulos e embalagens',
     'services.packaging.description': 'Criação de arte para rótulos e embalagens, com design funcional e pronto para impressão.',
+    'services.silkscreen.title': 'Arte para Silk-Screen',
+    'services.silkscreen.description': 'Criação de artes optimizadas para impressão em serigrafia, com cores separadas e especificações técnicas precisas.',
+    'services.landingpage.title': 'Landing Page',
+    'services.landingpage.description': 'Páginas de conversão profissionais com design responsivo e foco em resultados.',
     'services.quote': 'Pedir orçamento',
     
     // Portfolio
@@ -384,6 +392,10 @@ const translations = {
     'services.cutting.description': 'Optimized files for laser/router (MDF, acrylic, metal), with tolerances and fittings defined according to the project.',
     'services.packaging.title': 'Labels and packaging',
     'services.packaging.description': 'Art creation for labels and packaging, with functional design ready for printing.',
+    'services.silkscreen.title': 'Silk-Screen Art',
+    'services.silkscreen.description': 'Creation of arts optimized for screen printing, with separated colors and precise technical specifications.',
+    'services.landingpage.title': 'Landing Page',
+    'services.landingpage.description': 'Professional conversion pages with responsive design and results-focused.',
     'services.quote': 'Request quote',
     
     // Portfolio
@@ -532,6 +544,10 @@ const translations = {
     'services.cutting.description': 'Archivos optimizados para láser/router (MDF, acrílico, metal), con tolerancias y encajes definidos según el proyecto.',
     'services.packaging.title': 'Etiquetas y empaques',
     'services.packaging.description': 'Creación de arte para etiquetas y empaques, con diseño funcional y listo para impresión.',
+    'services.silkscreen.title': 'Arte para Silk-Screen',
+    'services.silkscreen.description': 'Creación de artes optimizadas para impresión en serigrafía, con colores separados y especificaciones técnicas precisas.',
+    'services.landingpage.title': 'Landing Page',
+    'services.landingpage.description': 'Páginas de conversión profesionales con diseño responsivo y enfoque en resultados.',
     'services.quote': 'Solicitar cotización',
     
     // Portfolio
@@ -680,6 +696,10 @@ const translations = {
     'services.cutting.description': 'Fichiers optimisés pour laser/routeur (MDF, acrylique, métal), avec tolérances et assemblages définis selon le projet.',
     'services.packaging.title': 'Étiquettes et emballages',
     'services.packaging.description': 'Création d\'art pour étiquettes et emballages, avec design fonctionnel prêt pour l\'impression.',
+    'services.silkscreen.title': 'Art pour Silk-Screen',
+    'services.silkscreen.description': 'Création d\'arts optimisés pour l\'impression en sérigraphie, avec couleurs séparées et spécifications techniques précises.',
+    'services.landingpage.title': 'Landing Page',
+    'services.landingpage.description': 'Pages de conversion professionnelles avec design responsive et axées sur les résultats.',
     'services.quote': 'Demander un devis',
     
     // Portfolio

@@ -26,17 +26,17 @@ const detectCurrencyAndPrices = () => {
   if (euroCountries.some(tz => timeZone.includes(tz.split('/')[1])) || locale.startsWith('de') || locale.startsWith('fr') || locale.startsWith('es') || locale.startsWith('it')) {
     return {
       currency: '€',
-      prices: ['100', '200', '300', '400']
+      prices: ['297', '597', '797', '997']
     };
   } else if (usTimezones.some(tz => timeZone.includes(tz)) || locale.includes('en-US')) {
     return {
       currency: '$',
-      prices: ['125', '250', '375', '500']
+      prices: ['297', '597', '797', '997']
     };
   } else {
     return {
       currency: 'R$',
-      prices: ['250', '500', '750', '1.000']
+      prices: ['297', '597', '797', '997']
     };
   }
 };

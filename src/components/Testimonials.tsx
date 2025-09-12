@@ -47,7 +47,7 @@ export const Testimonials = () => {
                         "{testimonial.text}"
                       </blockquote>
                       <cite className="text-muted-foreground not-italic font-medium">
-                        — {testimonial.author}, {testimonial.company}
+                        {testimonial.author}, {testimonial.company}
                       </cite>
                     </CardContent>
                   </Card>

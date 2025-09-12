@@ -72,7 +72,7 @@ const translations = {
     'hero.trust.fast': 'Atendimento ágil',
     
     // Contact
-    'contact.title': 'Fale com a Wilds Art\'s — contato direto e rápido',
+    'contact.title': 'Fale com a Wilds Art\'s\ncontato direto e rápido',
     'contact.subtitle': 'Entre em contato conosco para solicitar seu orçamento personalizado',
     'contact.whatsapp': 'WhatsApp',
     
@@ -200,7 +200,7 @@ const translations = {
     'clients.subtitle': 'Conheça algumas das empresas que já transformaram sua identidade visual conosco',
     
     // Footer
-    'footer.description': 'Wilds Art\'s — artes para redes sociais, identidade visual e manual de marca. Também vetorização, vetores para corte e gravação (MDF, acrílico, metal) e rótulos/embalagens.',
+    'footer.description': 'Wilds Art\'s\nartes para redes sociais, identidade visual e manual de marca. Também vetorização, vetores para corte e gravação (MDF, acrílico, metal) e rótulos/embalagens.',
     'footer.rights': 'Todos os direitos reservados.',
   },
   
@@ -224,7 +224,7 @@ const translations = {
     'hero.trust.fast': 'Atendimento rápido',
     
     // Contact
-    'contact.title': 'Fale com a Wilds Art\'s — contacto directo e rápido',
+    'contact.title': 'Fale com a Wilds Art\'s\ncontacto directo e rápido',
     'contact.subtitle': 'Entre em contacto connosco para solicitar o seu orçamento personalizado',
     'contact.whatsapp': 'WhatsApp',
     
@@ -329,7 +329,7 @@ const translations = {
     'clients.subtitle': 'Conheça algumas das empresas que já transformaram a sua identidade visual connosco',
     
     // Footer
-    'footer.description': 'Wilds Art\'s — artes para redes sociais, identidade visual e manual de marca. Também vectorização, vectores para corte e gravação (MDF, acrílico, metal) e rótulos/embalagens.',
+    'footer.description': 'Wilds Art\'s\nartes para redes sociais, identidade visual e manual de marca. Também vectorização, vectores para corte e gravação (MDF, acrílico, metal) e rótulos/embalagens.',
     'footer.rights': 'Todos os direitos reservados.',
   },
   
@@ -353,7 +353,7 @@ const translations = {
     'hero.trust.fast': 'Fast service',
     
     // Contact
-    'contact.title': 'Contact Wilds Art\'s — direct and fast contact',
+    'contact.title': 'Contact Wilds Art\'s\ndirect and fast contact',
     'contact.subtitle': 'Get in touch with us to request your personalized quote',
     'contact.whatsapp': 'WhatsApp',
     
@@ -477,7 +477,7 @@ const translations = {
     'clients.subtitle': 'Meet some of the companies that have already transformed their visual identity with us',
     
     // Footer
-    'footer.description': 'Wilds Art\'s — social media arts, visual identity and brand manual. Also vectorization, cutting and engraving vectors (MDF, acrylic, metal) and labels/packaging.',
+    'footer.description': 'Wilds Art\'s\nsocial media arts, visual identity and brand manual. Also vectorization, cutting and engraving vectors (MDF, acrylic, metal) and labels/packaging.',
     'footer.rights': 'All rights reserved.',
   },
   
@@ -501,7 +501,7 @@ const translations = {
     'hero.trust.fast': 'Atención rápida',
     
     // Contact
-    'contact.title': 'Contacta con Wilds Art\'s — contacto directo y rápido',
+    'contact.title': 'Contacta con Wilds Art\'s\ncontacto directo y rápido',
     'contact.subtitle': 'Ponte en contacto con nosotros para solicitar tu cotización personalizada',
     'contact.whatsapp': 'WhatsApp',
     
@@ -625,7 +625,7 @@ const translations = {
     'clients.subtitle': 'Conoce algunas de las empresas que ya transformaron su identidad visual con nosotros',
     
     // Footer
-    'footer.description': 'Wilds Art\'s — artes para redes sociales, identidad visual y manual de marca. También vectorización, vectores para corte y grabado (MDF, acrílico, metal) y etiquetas/empaques.',
+    'footer.description': 'Wilds Art\'s\nartes para redes sociales, identidad visual y manual de marca. También vectorización, vectores para corte y grabado (MDF, acrílico, metal) y etiquetas/empaques.',
     'footer.rights': 'Todos los derechos reservados.',
   },
   
@@ -649,7 +649,7 @@ const translations = {
     'hero.trust.fast': 'Service rapide',
     
     // Contact
-    'contact.title': 'Contactez Wilds Art\'s — contact direct et rapide',
+    'contact.title': 'Contactez Wilds Art\'s\ncontact direct et rapide',
     'contact.subtitle': 'Contactez-nous pour demander votre devis personnalisé',
     'contact.whatsapp': 'WhatsApp',
     
@@ -773,7 +773,7 @@ const translations = {
     'clients.subtitle': 'Rencontrez quelques-unes des entreprises qui ont déjà transformé leur identité visuelle avec nous',
     
     // Footer
-    'footer.description': 'Wilds Art\'s — arts pour réseaux sociaux, identité visuelle et manuel de marque. Aussi vectorisation, vecteurs pour découpe et gravure (MDF, acrylique, métal) et étiquettes/emballages.',
+    'footer.description': 'Wilds Art\'s\narts pour réseaux sociaux, identité visuelle et manuel de marque. Aussi vectorisation, vecteurs pour découpe et gravure (MDF, acrylique, métal) et étiquettes/emballages.',
     'footer.rights': 'Tous droits réservés.',
   },
 };

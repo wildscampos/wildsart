@@ -12,10 +12,10 @@ import portfolioMotion1 from '@/assets/portfolio-motion-1.jpg';
 const portfolioItems = [
   { image: portfolioSocial1, key: 'social' },
   { image: portfolioIdentity1, key: 'identity' },
-  { image: portfolioVector1, key: 'vector' },
+  { image: '/lovable-uploads/e0e67c25-bbc1-446e-8c9d-0a5c5bed48bc.png', key: 'vector' }, // Cantina das Marias
   { image: portfolioPackaging1, key: 'packaging' },
   { image: portfolioManual1, key: 'manual' },
-  { image: portfolioMotion1, key: 'motion' },
+  { image: '/lovable-uploads/596bfd17-db0d-4361-a58b-ecdd75436b43.png', key: 'landingpage' }, // Transkav Express
 ];
 
 export const Portfolio = () => {

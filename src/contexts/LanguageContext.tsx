@@ -129,10 +129,10 @@ const translations = {
     'portfolio.cta': 'Quero algo assim',
     'portfolio.projects.social': 'Projeto Wilds Art\'s - designs para redes sociais',
     'portfolio.projects.identity': 'Projeto Wilds Art\'s - identidade visual',
-    'portfolio.projects.vector': 'Projeto Wilds Art\'s - vetorização', 
+    'portfolio.projects.vector': 'Cantina das Marias - vetorização', 
     'portfolio.projects.packaging': 'Projeto Wilds Art\'s - rótulos e embalagens',
     'portfolio.projects.manual': 'Projeto Wilds Art\'s - manual de marca',
-    'portfolio.projects.motion': 'Projeto Wilds Art\'s - motion graphics',
+    'portfolio.projects.landingpage': 'Transkav Express - criação de Landing Page',
     
     // Testimonials
     'testimonials.title': 'Veja como ajudamos empresas reais a crescer com design',

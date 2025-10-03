@@ -1,5 +1,3 @@
-import { MessageCircle } from 'lucide-react';
-import { Button } from './ui/button';
 import { Card, CardContent } from './ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -53,23 +51,6 @@ export const Portfolio = () => {
           ))}
         </div>
 
-        <div className="text-center">
-          <Button 
-            size="lg" 
-            className="px-8 py-6"
-            asChild
-          >
-            <a 
-              href="https://wa.me/5512981823416?text=Olá,%20vim%20pelo%20site%20da%20Wilds%20Art's%20e%20quero%20um%20orçamento."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3"
-            >
-              <MessageCircle className="h-5 w-5" />
-              {t('portfolio.cta')}
-            </a>
-          </Button>
-        </div>
       </div>
     </section>
   );

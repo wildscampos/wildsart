@@ -5,12 +5,10 @@ import {
   Shapes, 
   Scissors, 
   Package,
-  MessageCircle,
   Paintbrush,
   MonitorPlay
 } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const Services = () => {
@@ -84,25 +82,9 @@ export const Services = () => {
                   <CardTitle className="text-xl">{t(service.titleKey)}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed mb-6">
+                  <CardDescription className="text-base leading-relaxed">
                     {t(service.descriptionKey)}
                   </CardDescription>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="w-full"
-                    asChild
-                  >
-                    <a 
-                      href="https://wa.me/5512981823416?text=Olá,%20vim%20pelo%20site%20da%20Wilds%20Art's%20e%20quero%20um%20orçamento."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2"
-                    >
-                      <MessageCircle className="h-4 w-4" />
-                      {t('services.quote')}
-                    </a>
-                  </Button>
                 </CardContent>
               </Card>
             );

@@ -75,6 +75,15 @@ const translations = {
     'contact.title': 'Entre em contato com a Wilds Art\'s\ncontato direto e rápido',
     'contact.subtitle': 'Entre em contato conosco para solicitar seu orçamento personalizado',
     'contact.whatsapp': 'WhatsApp',
+    'contact.form.name': 'Nome',
+    'contact.form.namePlaceholder': 'Seu nome completo',
+    'contact.form.company': 'Empresa',
+    'contact.form.companyPlaceholder': 'Nome da sua empresa',
+    'contact.form.service': 'Serviço de Interesse',
+    'contact.form.servicePlaceholder': 'Selecione um serviço',
+    'contact.form.email': 'E-mail',
+    'contact.form.emailPlaceholder': 'seu@email.com',
+    'contact.form.submit': 'Enviar',
     
     // WhatsApp
     'whatsapp.greeting': 'Olá! 👋 Como posso te ajudar hoje?',

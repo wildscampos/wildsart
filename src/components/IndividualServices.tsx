@@ -1,6 +1,4 @@
-import { MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const IndividualServices = () => {
@@ -71,39 +69,20 @@ export const IndividualServices = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-lg transition-all duration-300 hover:scale-105 border-border h-full flex flex-col"
+              className="group hover:shadow-lg transition-all duration-300 hover:scale-105 border-border"
             >
-              <CardHeader className="pb-4 flex-grow">
+              <CardHeader className="pb-4">
                 <CardTitle className="text-lg leading-tight">{t(service.nameKey)}</CardTitle>
                 <div className="flex items-baseline space-x-1 my-2">
                   <span className="text-2xl font-bold text-primary">R$ {service.price}</span>
                 </div>
-                <CardDescription className="text-sm leading-relaxed flex-grow">
+                <CardDescription className="text-sm leading-relaxed">
                   {t(service.descriptionKey)}
                 </CardDescription>
-                <p className="text-xs text-muted-foreground font-medium">
+                <p className="text-xs text-muted-foreground font-medium mt-2">
                   {t(service.unit)}
                 </p>
               </CardHeader>
-              
-              <CardContent className="pt-0">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-                  className="w-full"
-                  asChild
-                >
-                  <a 
-                    href="https://wa.me/5512981823416?text=Olá,%20vim%20pelo%20site%20da%20Wilds%20Art's%20e%20quero%20um%20orçamento."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2"
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    {t('individual.quote')}
-                  </a>
-                </Button>
-              </CardContent>
             </Card>
           ))}
         </div>

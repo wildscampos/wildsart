@@ -10,7 +10,6 @@ import { Contact } from '@/components/Contact';
 import { Clients } from '@/components/Clients';
 import { Footer } from '@/components/Footer';
 import { StructuredData } from '@/components/StructuredData';
-import WhatsAppWidget from '@/components/WhatsAppWidget';
 
 const Index = () => {
   return (
@@ -29,7 +28,6 @@ const Index = () => {
         <Clients />
       </main>
       <Footer />
-      <WhatsAppWidget phoneNumber="5512981823416" />
     </div>
   );
 };

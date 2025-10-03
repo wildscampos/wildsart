@@ -1,4 +1,4 @@
-import { MessageCircle, Eye } from 'lucide-react';
+import { Eye } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -34,22 +34,6 @@ export const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="w-full sm:w-auto text-lg px-8 py-6"
-              asChild
-            >
-              <a 
-                href="https://wa.me/5512981823416?text=Olá,%20vim%20pelo%20site%20da%20Wilds%20Art's%20e%20quero%20um%20orçamento."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3"
-              >
-                <MessageCircle className="h-5 w-5" />
-                {t('hero.cta.quote')}
-              </a>
-            </Button>
-            
             <Button 
               variant="outline" 
               size="lg"

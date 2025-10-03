@@ -73,9 +73,6 @@ export const IndividualServices = () => {
             >
               <CardHeader className="pb-4">
                 <CardTitle className="text-lg leading-tight">{t(service.nameKey)}</CardTitle>
-                <div className="flex items-baseline space-x-1 my-2">
-                  <span className="text-2xl font-bold text-primary">R$ {service.price}</span>
-                </div>
                 <CardDescription className="text-sm leading-relaxed">
                   {t(service.descriptionKey)}
                 </CardDescription>

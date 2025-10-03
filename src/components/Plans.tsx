@@ -1,5 +1,4 @@
 import { Check } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -79,10 +78,6 @@ export const Plans = () => {
               
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-2xl font-bold">{plan.name}</CardTitle>
-                <div className="flex items-baseline justify-center space-x-1">
-                  <span className="text-3xl font-bold text-primary">{currency} {prices[plan.priceIndex]}</span>
-                  <span className="text-muted-foreground">{t('plans.period')}</span>
-                </div>
                 <CardDescription className="text-sm leading-relaxed">
                   {t(`plans.${plan.name.toLowerCase()}.description`)}
                 </CardDescription>
@@ -126,16 +121,6 @@ export const Plans = () => {
           </div>
         </div>
 
-        {/* Terms */}
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6">{t('plans.terms.title')}</h3>
-          <div className="prose prose-neutral dark:prose-invert max-w-none text-muted-foreground mb-8">
-            <p>
-              {t('plans.terms.content')}
-            </p>
-          </div>
-          
-        </div>
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ import {
 
 export const Testimonials = () => {
   const { t } = useLanguage();
-  const testimonials = t('testimonials.items');
+  const testimonials = t('testimonials.items') as Array<{text: string, author: string, company: string}> || [];
 
   return (
     <section id="depoimentos" className="py-20">

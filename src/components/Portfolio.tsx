@@ -1,5 +1,5 @@
-import { GlowCard } from './ui/spotlight-card';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Card } from './ui/card';
 
 // Import portfolio images
 import portfolioSocial1 from '@/assets/portfolio-social-1.jpg';
@@ -33,13 +33,11 @@ export const Portfolio = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {portfolioItems.map((item, index) => (
-            <GlowCard 
+            <Card 
               key={index} 
-              className="group overflow-hidden hover:shadow-lg transition-all duration-300 w-full" 
-              customSize={true}
-              glowColor="purple"
+              className="group overflow-hidden hover:shadow-lg transition-all duration-300"
             >
-              <div className="aspect-square overflow-hidden rounded-lg">
+              <div className="aspect-square overflow-hidden">
                 <img
                   src={item.image}
                   alt={t(`portfolio.projects.${item.key}`)}
@@ -47,10 +45,10 @@ export const Portfolio = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="p-2">
+              <div className="p-4">
                 <p className="text-sm text-muted-foreground">{t(`portfolio.projects.${item.key}`)}</p>
               </div>
-            </GlowCard>
+            </Card>
           ))}
         </div>
 

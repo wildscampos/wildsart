@@ -1,13 +1,5 @@
-import { useEffect } from "react";
 import { useLanguage } from '@/contexts/LanguageContext';
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { cn } from "@/lib/utils";
 
 const clients = [
   {
@@ -48,6 +40,7 @@ const clients = [
 
 export const Clients = () => {
   const { t } = useLanguage();
+  
   const renderClientCard = (client: typeof clients[0], index: number) => {
     const cardContent = (
       <>
@@ -76,7 +69,7 @@ export const Clients = () => {
           href={client.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex flex-col items-center p-8 bg-background rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+          className="group flex flex-col items-center p-8 bg-background rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer min-w-[280px]"
         >
           {cardContent}
         </a>
@@ -86,7 +79,7 @@ export const Clients = () => {
     return (
       <div
         key={index}
-        className="flex flex-col items-center p-8 bg-background rounded-xl shadow-sm"
+        className="flex flex-col items-center p-8 bg-background rounded-xl shadow-sm min-w-[280px]"
       >
         {cardContent}
       </div>
@@ -105,30 +98,11 @@ export const Clients = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <Carousel
-            plugins={[
-              Autoplay({
-                delay: 3000,
-                stopOnInteraction: true,
-              }),
-            ]}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {clients.map((client, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/3">
-                  {renderClientCard(client, index)}
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
+        <div className="relative overflow-hidden">
+          <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused]">
+            {clients.map((client, index) => renderClientCard(client, index))}
+            {clients.map((client, index) => renderClientCard(client, `duplicate-${index}` as any))}
+          </div>
         </div>
       </div>
     </section>

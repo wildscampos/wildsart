@@ -98,7 +98,15 @@ export const Clients = () => {
           </p>
         </div>
 
-        <div className="relative overflow-hidden">
+        <div 
+          className="relative overflow-hidden"
+          style={
+            {
+              '--duration': '120s',
+              '--gap': '1.5rem',
+            } as React.CSSProperties
+          }
+        >
           <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused]">
             {clients.map((client, index) => renderClientCard(client, index))}
             {clients.map((client, index) => renderClientCard(client, `duplicate-${index}` as any))}

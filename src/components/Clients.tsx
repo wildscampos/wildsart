@@ -1,5 +1,4 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { cn } from "@/lib/utils";
 
 const clients = [
   {
@@ -38,56 +37,52 @@ const clients = [
   }
 ];
 
-export const Clients = () => {
-  const { t } = useLanguage();
-  
-  const renderClientCard = (client: typeof clients[0], index: number) => {
-    const cardContent = (
-      <>
-        <div className="w-32 h-32 mb-4 flex items-center justify-center bg-white rounded-lg p-3 shadow-sm">
-          <img
-            src={client.logo}
-            alt={`Logo ${client.name}`}
-            className="max-w-full max-h-full object-contain"
-          />
-        </div>
-        <div className="text-center">
-          <h3 className={`font-bold mb-1 ${client.website ? 'group-hover:text-primary transition-colors' : ''}`}>
-            {client.name}
-          </h3>
-          <p className="text-sm text-muted-foreground">
-            {client.subtitle}
-          </p>
-        </div>
-      </>
-    );
+const ClientCard = ({ client }: { client: typeof clients[0] }) => {
+  const cardContent = (
+    <>
+      <div className="w-32 h-32 mb-4 flex items-center justify-center bg-white rounded-lg p-3 shadow-sm">
+        <img
+          src={client.logo}
+          alt={`Logo ${client.name}`}
+          className="max-w-full max-h-full object-contain"
+        />
+      </div>
+      <div className="text-center">
+        <h3 className={`font-bold mb-1 ${client.website ? 'group-hover:text-primary transition-colors' : ''}`}>
+          {client.name}
+        </h3>
+        <p className="text-sm text-muted-foreground">
+          {client.subtitle}
+        </p>
+      </div>
+    </>
+  );
 
-    if (client.website) {
-      return (
-        <a
-          key={index}
-          href={client.website}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group flex flex-col items-center p-8 bg-background rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer min-w-[280px]"
-        >
-          {cardContent}
-        </a>
-      );
-    }
-
+  if (client.website) {
     return (
-      <div
-        key={index}
-        className="flex flex-col items-center p-8 bg-background rounded-xl shadow-sm min-w-[280px]"
+      <a
+        href={client.website}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex flex-col items-center p-8 bg-background rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer shrink-0 w-[280px]"
       >
         {cardContent}
-      </div>
+      </a>
     );
-  };
+  }
 
   return (
-    <section className="py-24 bg-muted/50">
+    <div className="flex flex-col items-center p-8 bg-background rounded-xl shadow-sm shrink-0 w-[280px]">
+      {cardContent}
+    </div>
+  );
+};
+
+export const Clients = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section className="py-24 bg-muted/50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -99,17 +94,21 @@ export const Clients = () => {
         </div>
 
         <div 
-          className="relative overflow-hidden"
-          style={
-            {
-              '--duration': '120s',
-              '--gap': '1.5rem',
-            } as React.CSSProperties
-          }
+          className="relative flex gap-6"
+          style={{
+            '--duration': '120s',
+            '--gap': '1.5rem',
+          } as React.CSSProperties}
         >
-          <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused]">
-            {clients.map((client, index) => renderClientCard(client, index))}
-            {clients.map((client, index) => renderClientCard(client, `duplicate-${index}` as any))}
+          <div className="flex gap-6 animate-marquee">
+            {clients.map((client, index) => (
+              <ClientCard key={index} client={client} />
+            ))}
+          </div>
+          <div className="flex gap-6 animate-marquee" aria-hidden="true">
+            {clients.map((client, index) => (
+              <ClientCard key={`duplicate-${index}`} client={client} />
+            ))}
           </div>
         </div>
       </div>

@@ -13,8 +13,8 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       schema = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Wilds Art's",
-        "description": "Estúdio de design focado em artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte/gravação e rótulos/embalagens.",
+        "name": "Wilds Art",
+        "description": "Estúdio de design focado em artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte/gravação, rótulos/embalagens e artes vetoriais para silk-screen e DTF.",
         "url": "https://wildsarts.com",
         "logo": "https://wildsarts.com/logo.png",
         "contactPoint": {

@@ -62,17 +62,17 @@ const translations = {
     'nav.contact': 'Contato',
     
     // Hero Section
-    'hero.title': 'Wilds Art\'s',
+    'hero.title': 'Wilds Art',
     'hero.subtitle': 'Onde sua visão vira design',
     'hero.description': 'Artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte e gravação, rótulos e embalagens. Peças prontas para produzir e vender.',
-    'hero.cta.quote': 'Falar agora com a Wilds Art\'s',
+    'hero.cta.quote': 'Falar agora com a Wilds Art',
     'hero.cta.portfolio': 'Ver portfólio',
     'hero.trust.experience': '23 anos de experiência',
     'hero.trust.ready': 'Arquivos prontos para produção',
     'hero.trust.fast': 'Atendimento rápido',
     
     // Contact
-    'contact.title': 'Entre em contato com a Wilds Art\'s\ncontato direto e rápido',
+    'contact.title': 'Entre em contato com a Wilds Art\ncontato direto e rápido',
     'contact.subtitle': 'Entre em contato conosco para solicitar seu orçamento personalizado',
     'contact.whatsapp': 'WhatsApp',
     'contact.form.name': 'Nome',
@@ -91,7 +91,7 @@ const translations = {
     'whatsapp.button': 'Conversar no WhatsApp',
     'whatsapp.online': 'Online agora',
     'whatsapp.aria': 'Abrir chat do WhatsApp',
-    'whatsapp.message': 'Olá! Gostaria de saber mais sobre os serviços da Wilds Art\'s.',
+    'whatsapp.message': 'Olá! Gostaria de saber mais sobre os serviços da Wilds Art.',
     
     // About
     'about.title': 'Quem Somos',
@@ -127,11 +127,11 @@ const translations = {
     'portfolio.title': 'Portfólio',
     'portfolio.subtitle': 'Conheça alguns dos nossos trabalhos e projetos realizados',
     'portfolio.cta': 'Quero algo assim',
-    'portfolio.projects.social': 'Projeto Wilds Art\'s - designs para redes sociais',
-    'portfolio.projects.identity': 'Projeto Wilds Art\'s - identidade visual',
+    'portfolio.projects.social': 'Projeto Wilds Art - designs para redes sociais',
+    'portfolio.projects.identity': 'Projeto Wilds Art - identidade visual',
     'portfolio.projects.vector': 'Cantina das Marias - vetorização', 
-    'portfolio.projects.packaging': 'Projeto Wilds Art\'s - rótulos e embalagens',
-    'portfolio.projects.manual': 'Projeto Wilds Art\'s - manual de marca',
+    'portfolio.projects.packaging': 'Projeto Wilds Art - rótulos e embalagens',
+    'portfolio.projects.manual': 'Projeto Wilds Art - manual de marca',
     'portfolio.projects.landingpage': 'Transkav Express - criação de Landing Page',
     
     // Testimonials
@@ -247,7 +247,7 @@ const translations = {
     'clients.subtitle': 'Conheça algumas das empresas que já transformaram sua identidade visual conosco',
     
     // Footer
-    'footer.description': 'Wilds Art\'s\nartes para redes sociais, identidade visual e manual de marca. Também vetorização, vetores para corte e gravação (MDF, acrílico, metal) e rótulos/embalagens.',
+    'footer.description': 'Wilds Art\nartes para redes sociais, identidade visual e manual de marca. Também vetorização, vetores para corte e gravação (MDF, acrílico, metal), rótulos/embalagens e artes vetoriais para silk-screen e DTF.',
     'footer.rights': 'Todos os direitos reservados.',
     'footer.nav.home': 'Início',
     'footer.nav.services': 'Serviços',

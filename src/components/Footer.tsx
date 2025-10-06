@@ -13,7 +13,7 @@ export const Footer = () => {
           <div>
             <img 
               src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
-              alt="Wilds Art's - logotipo" 
+              alt="Wilds Art - logotipo" 
               className="h-8 w-auto mx-auto"
             />
           </div>
@@ -48,7 +48,7 @@ export const Footer = () => {
           {/* Copyright */}
           <div className="pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Wilds Art's. {t('footer.rights')}
+              © {currentYear} Wilds Art. {t('footer.rights')}
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ export const Hero = () => {
         <div className="mb-8">
           <img 
             src="/lovable-uploads/596bfd17-db0d-4361-a58b-ecdd75436b43.png" 
-            alt="Wilds Art's - logotipo oficial" 
+            alt="Wilds Art - logotipo oficial" 
             className="mx-auto h-24 w-auto mb-6"
           />
         </div>

@@ -48,7 +48,7 @@ const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">
-                  Wilds Art's
+                  Wilds Art
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   {t('whatsapp.online')}

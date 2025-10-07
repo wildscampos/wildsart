@@ -4,12 +4,12 @@ import { TestimonialAuthor } from '@/components/ui/testimonial-card';
 
 export const Testimonials = () => {
   const { t } = useLanguage();
-  const testimonialsData = t('testimonials.items') as Array<{
+  const testimonialsData = (t('testimonials.items') as Array<{
     text: string;
     author: string;
     company: string;
     avatar?: string;
-  }> || [];
+  }>) || [];
 
   // Transform data to match the new component format
   const testimonials = testimonialsData.map((testimonial, index) => ({

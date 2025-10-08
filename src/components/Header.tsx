@@ -21,9 +21,31 @@ export const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        {/* Left side - Menu Button and Theme Toggle */}
-        <div className="flex items-center space-x-3">
+      <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
+        {/* Logo - Left side */}
+        <div className="flex items-center flex-shrink-0">
+          <img 
+            src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
+            alt="Wilds Art - logotipo" 
+            className="h-8 w-auto"
+          />
+        </div>
+
+        {/* Desktop Navigation - Center */}
+        <nav className="hidden lg:flex items-center space-x-6 flex-1 justify-center">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors whitespace-nowrap"
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        {/* Right side - Controls */}
+        <div className="flex items-center space-x-2 flex-shrink-0">
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <Button
@@ -42,28 +64,6 @@ export const Header = () => {
           
           <ThemeToggle />
           <LanguageSelector />
-        </div>
-
-        {/* Desktop Navigation - Center */}
-        <nav className="hidden lg:flex items-center space-x-8">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
-
-        {/* Logo - Right side */}
-        <div className="flex items-center">
-          <img 
-            src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
-            alt="Wilds Art - logotipo" 
-            className="h-8 w-auto"
-          />
         </div>
       </div>
 

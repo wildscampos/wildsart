@@ -291,7 +291,12 @@ const translations = {
     
     // About
     'about.title': 'Quem Somos',
-    'about.description': 'A Wilds Art\'s nasce com 23 anos de experiência em design, adquirida em empresas de comunicação visual, corte laser, estamparia e confecção. Unimos precisão técnica e linguagem orientada a resultado, do post ao ficheiro de produção.',
+    'about.description': [
+      '23 anos de experiência em design',
+      'Precisão técnica e criatividade',
+      'Do post ao ficheiro de produção',
+      'Artes prontas para impressão ou corte'
+    ],
     
     // Services
     'services.title': 'Serviços',

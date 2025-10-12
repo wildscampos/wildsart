@@ -96,7 +96,7 @@ export const Clients = () => {
         <div 
           className="relative flex gap-6"
           style={{
-            '--duration': '80s',
+            '--duration': '40s',
             '--gap': '1.5rem',
           } as React.CSSProperties}
         >

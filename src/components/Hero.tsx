@@ -1,9 +1,13 @@
 import { Eye } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
+import logoLight from '@/assets/logo-light.jpg';
+import logoDark from '@/assets/logo-dark.jpg';
 
 export const Hero = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   return (
     <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
       {/* Background Glow Effects */}
@@ -15,7 +19,7 @@ export const Hero = () => {
         {/* Logo - Will use the uploaded logo */}
         <div className="mb-8">
           <img 
-            src="/lovable-uploads/596bfd17-db0d-4361-a58b-ecdd75436b43.png" 
+            src={theme === 'dark' ? logoDark : logoLight}
             alt="Wilds Art - logotipo oficial" 
             className="mx-auto h-24 w-auto mb-6"
           />

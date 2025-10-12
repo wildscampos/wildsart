@@ -1,8 +1,11 @@
-import logoHorizontal from '@/assets/logo-horizontal.png';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
+import logoLight from '@/assets/logo-light.jpg';
+import logoDark from '@/assets/logo-dark.jpg';
 
 export const Footer = () => {
   const { t } = useLanguage();
+  const { theme } = useTheme();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,7 +15,7 @@ export const Footer = () => {
           {/* Logo */}
           <div>
             <img 
-              src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
+              src={theme === 'dark' ? logoDark : logoLight}
               alt="Wilds Art - logotipo" 
               className="h-8 w-auto mx-auto"
             />

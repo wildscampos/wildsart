@@ -3,12 +3,15 @@ import { Menu, X, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { ThemeToggle } from './ui/theme-toggle';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTheme } from '@/contexts/ThemeContext';
 import LanguageSelector from './LanguageSelector';
-import logoHorizontal from '@/assets/logo-horizontal.png';
+import logoLight from '@/assets/logo-light.jpg';
+import logoDark from '@/assets/logo-dark.jpg';
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const { theme } = useTheme();
 
   const navItems = [
     { label: t('nav.home'), href: '#inicio' },
@@ -25,7 +28,7 @@ export const Header = () => {
         {/* Logo - Left side */}
         <div className="flex items-center flex-shrink-0">
           <img 
-            src="/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png" 
+            src={theme === 'dark' ? logoDark : logoLight}
             alt="Wilds Art - logotipo" 
             className="h-8 w-auto"
           />

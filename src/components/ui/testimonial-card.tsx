@@ -37,6 +37,13 @@ export function TestimonialCard({
       )}
     >
       <div className="flex items-center gap-3">
+        {author.logo && (
+          <img 
+            src={author.logo} 
+            alt={`${author.handle} logo`}
+            className="h-12 w-auto object-contain opacity-70"
+          />
+        )}
         <Avatar className="h-12 w-12">
           <AvatarImage src={author.avatar} alt={author.name} />
         </Avatar>
@@ -48,13 +55,6 @@ export function TestimonialCard({
             {author.handle}
           </p>
         </div>
-        {author.logo && (
-          <img 
-            src={author.logo} 
-            alt={`${author.handle} logo`}
-            className="h-8 w-auto object-contain opacity-70"
-          />
-        )}
       </div>
       <p className="sm:text-md mt-4 text-sm text-muted-foreground">
         {text}

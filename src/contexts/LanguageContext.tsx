@@ -142,25 +142,25 @@ const translations = {
         text: "Trabalho impecável! As peças chegaram prontas para produção, sem necessidade de ajustes. A qualidade técnica é excelente.",
         author: "Waldir",
         company: "Cia da Fé",
-        logo: "/lovable-uploads/e0e67c25-bbc1-446e-8c9d-0a5c5bed48bc.png"
+        logo: "/lovable-uploads/284477c0-3c6e-4a63-a4c9-2d319d510d74.png"
       },
       {
         text: "Entrega sempre no prazo e comunicação clara. Os arquivos são perfeitos para estamparia digital, facilitam muito nosso processo.",
         author: "Neiva",
         company: "Stamp|Cia",
-        logo: "/lovable-uploads/596bfd17-db0d-4361-a58b-ecdd75436b43.png"
+        logo: "/lovable-uploads/db1fc48f-67f3-472a-b6f2-7f21d2d989d4.png"
       },
       {
         text: "Profissionalismo de primeira! O design da nossa marca ficou moderno e impactante. Recomendo sem dúvidas.",
         author: "Leandro",
         company: "LuminaBox",
-        logo: "/lovable-uploads/9167cb4f-9fbd-4278-b3f4-acd8be268bbd.png"
+        logo: "/lovable-uploads/cd7a7768-c2ef-4c99-8309-ed4175b2b2d8.png"
       },
       {
         text: "Criatividade e atenção aos detalhes que fazem a diferença. Cada peça é pensada com carinho e técnica.",
         author: "Sandra",
         company: "Mimos da Drika",
-        logo: "/lovable-uploads/22617fdc-dc3c-4326-b1ed-122bbac3af35.png"
+        logo: "/lovable-uploads/3878e6a3-3c75-4899-8748-81ead810c47b.png"
       },
       {
         text: "Identidade visual forte e marcante! O resultado superou nossas expectativas e fortaleceu nossa presença no mercado.",
@@ -172,7 +172,7 @@ const translations = {
         text: "Design acolhedor que traduz perfeitamente o conceito da nossa cantina. Ficamos muito satisfeitas com o resultado!",
         author: "Izilda",
         company: "Cantina das Marias",
-        logo: "/lovable-uploads/f79b63da-e287-4435-bba0-6eb0c184ee07.png"
+        logo: "/lovable-uploads/263c2bb0-e232-4bd9-9829-f1f5a623afe3.png"
       }
     ],
     

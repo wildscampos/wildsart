@@ -5,6 +5,7 @@ export interface TestimonialAuthor {
   name: string
   handle: string
   avatar: string
+  logo?: string
 }
 
 export interface TestimonialCardProps {
@@ -39,7 +40,7 @@ export function TestimonialCard({
         <Avatar className="h-12 w-12">
           <AvatarImage src={author.avatar} alt={author.name} />
         </Avatar>
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start flex-1">
           <h3 className="text-md font-semibold leading-none">
             {author.name}
           </h3>
@@ -47,6 +48,13 @@ export function TestimonialCard({
             {author.handle}
           </p>
         </div>
+        {author.logo && (
+          <img 
+            src={author.logo} 
+            alt={`${author.handle} logo`}
+            className="h-8 w-auto object-contain opacity-70"
+          />
+        )}
       </div>
       <p className="sm:text-md mt-4 text-sm text-muted-foreground">
         {text}

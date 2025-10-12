@@ -16,7 +16,8 @@ export const Testimonials = () => {
     author: {
       name: testimonial.author,
       handle: testimonial.company,
-      avatar: testimonial.avatar || `https://images.unsplash.com/photo-${1494790108377 + index}?w=150&h=150&fit=crop&crop=face`
+      avatar: testimonial.avatar || `https://images.unsplash.com/photo-${1494790108377 + index}?w=150&h=150&fit=crop&crop=face`,
+      logo: (testimonial as any).logo
     } as TestimonialAuthor,
     text: testimonial.text
   }));

@@ -6,7 +6,7 @@ import logoVideo from '@/assets/logo-video.mp4';
 export const Hero = () => {
   const { t } = useLanguage();
   return (
-    <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+    <section id="inicio" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 hero-glow opacity-30" />
       <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
@@ -21,7 +21,7 @@ export const Hero = () => {
             loop
             muted
             playsInline
-            className="mx-auto h-24 w-auto mb-6"
+            className="mx-auto h-36 w-auto mb-6"
             aria-label="Wilds Art - logotipo oficial"
           />
         </div>

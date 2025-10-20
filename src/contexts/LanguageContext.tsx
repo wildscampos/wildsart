@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-export type Language = 'pt-BR' | 'pt-PT' | 'en' | 'es' | 'fr';
+export type Language = 'pt-BR' | 'en' | 'es';
 
 // Função para detectar localização e moeda
 const detectCurrencyAndPrices = () => {

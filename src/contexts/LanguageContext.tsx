@@ -418,27 +418,16 @@ const translations = {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('pt-BR');
+  const [language] = useState<Language>('pt-BR');
   const { currency, prices } = detectCurrencyAndPrices();
 
+  // Set page title to Portuguese
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && Object.keys(translations).includes(savedLanguage)) {
-      setLanguage(savedLanguage);
-    }
+    document.title = 'Wilds Art - Design Profissional para Sua Marca';
   }, []);
 
-  const handleSetLanguage = (lang: Language) => {
-    setLanguage(lang);
-    localStorage.setItem('language', lang);
-    
-    // Update page title based on language
-    const titles = {
-      'pt-BR': 'Wilds Art\'s - Design Profissional para Sua Marca',
-      'en': 'Wilds Art\'s - Professional Design for Your Brand',
-      'es': 'Wilds Art\'s - Diseño Profesional para Tu Marca',
-    };
-    document.title = titles[lang];
+  const handleSetLanguage = () => {
+    // Language is fixed to pt-BR
   };
 
   const t = (key: string): any => {

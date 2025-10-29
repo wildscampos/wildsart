@@ -1,11 +1,8 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { useTheme } from '@/contexts/ThemeContext';
-import logoLight from '@/assets/logo-light.jpg';
-import logoDark from '@/assets/logo-dark.jpg';
+import logoVideo from '@/assets/logo-video.mp4';
 
 export const Footer = () => {
   const { t } = useLanguage();
-  const { theme } = useTheme();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -14,9 +11,12 @@ export const Footer = () => {
         <div className="text-center space-y-8">
           {/* Logo */}
           <div>
-            <img 
-              src={theme === 'dark' ? logoDark : logoLight}
-              alt="Wilds Art - logotipo" 
+            <video 
+              src={logoVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
               className="h-8 w-auto mx-auto"
             />
           </div>

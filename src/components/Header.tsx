@@ -4,7 +4,6 @@ import { Button } from './ui/button';
 import { ThemeToggle } from './ui/theme-toggle';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
-import LanguageSelector from './LanguageSelector';
 import logoLight from '@/assets/logo-light.jpg';
 import logoDark from '@/assets/logo-dark.jpg';
 
@@ -64,7 +63,6 @@ export const Header = () => {
           </div>
           
           <ThemeToggle />
-          <LanguageSelector />
         </div>
       </div>
 

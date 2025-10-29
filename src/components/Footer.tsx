@@ -37,9 +37,6 @@ export const Footer = () => {
             <a href="#planos" className="text-muted-foreground hover:text-primary transition-colors">
               {t('nav.plans')}
             </a>
-            <a href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors">
-              {t('nav.portfolio')}
-            </a>
             <a href="#depoimentos" className="text-muted-foreground hover:text-primary transition-colors">
               {t('nav.testimonials')}
             </a>

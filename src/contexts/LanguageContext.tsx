@@ -261,6 +261,56 @@ const translations = {
     'footer.nav.portfolio': 'Portfólio',
     'footer.nav.testimonials': 'Depoimentos',
     'footer.nav.contact': 'Contato',
+    'footer.privacy': 'Política de Privacidade',
+    'footer.terms': 'Termos de Serviço',
+    
+    // Privacy Policy
+    'privacy.title': 'Política de Privacidade',
+    'privacy.intro.title': 'Introdução',
+    'privacy.intro.content': 'A Wilds Art valoriza a privacidade de seus clientes e está comprometida em proteger suas informações pessoais. Esta política de privacidade descreve como coletamos, usamos e protegemos seus dados.',
+    'privacy.collection.title': 'Informações que Coletamos',
+    'privacy.collection.content': 'Coletamos informações que você nos fornece diretamente, incluindo:',
+    'privacy.collection.items': [
+      'Nome e informações de contato (e-mail, telefone)',
+      'Informações da empresa',
+      'Detalhes sobre os serviços de interesse'
+    ],
+    'privacy.usage.title': 'Como Usamos suas Informações',
+    'privacy.usage.content': 'Utilizamos as informações coletadas para:',
+    'privacy.usage.items': [
+      'Responder às suas solicitações de orçamento',
+      'Fornecer nossos serviços de design',
+      'Enviar atualizações sobre projetos em andamento'
+    ],
+    'privacy.protection.title': 'Proteção de Dados',
+    'privacy.protection.content': 'Implementamos medidas de segurança técnicas e organizacionais para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição.',
+    'privacy.rights.title': 'Seus Direitos',
+    'privacy.rights.content': 'Você tem o direito de:',
+    'privacy.rights.items': [
+      'Acessar suas informações pessoais',
+      'Corrigir dados incorretos',
+      'Solicitar a exclusão de seus dados',
+      'Retirar o consentimento para o uso de suas informações'
+    ],
+    'privacy.contact.title': 'Contato',
+    'privacy.contact.content': 'Para questões relacionadas à privacidade, entre em contato conosco através do WhatsApp disponível em nosso site.',
+    
+    // Terms of Service
+    'terms.title': 'Termos de Serviço',
+    'terms.intro.title': 'Aceitação dos Termos',
+    'terms.intro.content': 'Ao utilizar os serviços da Wilds Art, você concorda com estes termos de serviço. Por favor, leia-os cuidadosamente antes de contratar nossos serviços.',
+    'terms.services.title': 'Serviços Oferecidos',
+    'terms.services.content': 'A Wilds Art oferece serviços profissionais de design, incluindo criação de artes para redes sociais, identidade visual, manual de marca, vetorização, design de embalagens e outros serviços relacionados ao design gráfico.',
+    'terms.intellectual.title': 'Propriedade Intelectual',
+    'terms.intellectual.content': 'Após o pagamento integral dos serviços, os direitos de uso dos designs criados são transferidos para o cliente. A Wilds Art mantém o direito de utilizar os trabalhos em seu portfólio, salvo acordo em contrário.',
+    'terms.payment.title': 'Pagamento e Prazos',
+    'terms.payment.content': 'Os valores e prazos dos serviços são acordados previamente com cada cliente. O pagamento deve ser efetuado conforme as condições estabelecidas no orçamento aprovado.',
+    'terms.liability.title': 'Limitação de Responsabilidade',
+    'terms.liability.content': 'A Wilds Art compromete-se a entregar trabalhos de qualidade profissional. No entanto, não nos responsabilizamos por problemas decorrentes do uso inadequado dos arquivos ou alterações feitas por terceiros.',
+    'terms.modifications.title': 'Modificações nos Termos',
+    'terms.modifications.content': 'Reservamo-nos o direito de modificar estes termos a qualquer momento. As alterações entrarão em vigor imediatamente após sua publicação.',
+    'terms.contact.title': 'Contato',
+    'terms.contact.content': 'Para dúvidas sobre estes termos, entre em contato conosco através do WhatsApp disponível em nosso site.',
   },
   
   'en': {

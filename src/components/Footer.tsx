@@ -28,17 +28,27 @@ export const Footer = () => {
 
           {/* Navigation Links */}
           <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="#inicio" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#inicio" className="text-muted-foreground hover:text-primary transition-colors">
               {t('nav.home')}
             </a>
-            <a href="#servicos" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#servicos" className="text-muted-foreground hover:text-primary transition-colors">
               {t('nav.services')}
             </a>
-            <a href="#depoimentos" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#depoimentos" className="text-muted-foreground hover:text-primary transition-colors">
               {t('nav.testimonials')}
             </a>
-            <a href="#contato" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#contato" className="text-muted-foreground hover:text-primary transition-colors">
               {t('nav.contact')}
+            </a>
+          </nav>
+
+          {/* Legal Links */}
+          <nav className="flex flex-wrap justify-center gap-6 text-xs text-muted-foreground/80">
+            <a href="/politica-privacidade" className="hover:text-primary transition-colors">
+              {t('footer.privacy')}
+            </a>
+            <a href="/termos-servico" className="hover:text-primary transition-colors">
+              {t('footer.terms')}
             </a>
           </nav>
 

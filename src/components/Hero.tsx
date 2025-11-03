@@ -1,5 +1,3 @@
-import { Eye } from 'lucide-react';
-import { Button } from './ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import logoVideo from '@/assets/logo-video.mp4';
 
@@ -36,21 +34,6 @@ export const Hero = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-12 text-balance max-w-3xl mx-auto">
             {t('hero.description')}
           </p>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="w-full sm:w-auto text-lg px-8 py-6"
-              asChild
-            >
-              <a href="#portfolio" className="flex items-center gap-3">
-                <Eye className="h-5 w-5" />
-                {t('hero.cta.portfolio')}
-              </a>
-            </Button>
-          </div>
 
           {/* Trust Bullets */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-muted-foreground">

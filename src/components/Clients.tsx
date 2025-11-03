@@ -10,8 +10,7 @@ const clients = [
   {
     name: "TransKav Express",
     subtitle: "Transporte e Logística",
-    logo: "/lovable-uploads/540213af-8d15-483d-85fe-2cf8f214bd97.png",
-    website: "https://transkav.lovable.app/"
+    logo: "/lovable-uploads/540213af-8d15-483d-85fe-2cf8f214bd97.png"
   },
   {
     name: "Cia da Fé",

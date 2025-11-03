@@ -35,21 +35,6 @@ export const Hero = () => {
             {t('hero.description')}
           </p>
 
-          {/* Trust Bullets */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-sm font-medium">{t('hero.trust.experience')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-sm font-medium">{t('hero.trust.ready')}</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-primary rounded-full" />
-              <span className="text-sm font-medium">{t('hero.trust.fast')}</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

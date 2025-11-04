@@ -16,10 +16,16 @@ export const Header = () => {
   const { t } = useLanguage();
   const { theme } = useTheme();
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+      if (
+        mobileMenuRef.current && 
+        !mobileMenuRef.current.contains(event.target as Node) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target as Node)
+      ) {
         setMobileMenuOpen(false);
       }
     };
@@ -108,7 +114,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div ref={menuButtonRef} className="lg:hidden">
             <Button
               variant="ghost"
               size="icon"

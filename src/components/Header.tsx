@@ -6,6 +6,10 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
 import logoLight from '@/assets/logo-light.jpg';
 import logoDark from '@/assets/logo-dark.jpg';
+import instagramIcon from '@/assets/instagram-icon.svg';
+import linkedinIcon from '@/assets/linkedin-icon.svg';
+import tiktokIcon from '@/assets/tiktok-icon.svg';
+import youtubeIcon from '@/assets/youtube-icon.svg';
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,6 +67,46 @@ export const Header = () => {
 
         {/* Right side - Controls */}
         <div className="flex items-center space-x-2 flex-shrink-0">
+          {/* Social Media Icons - Desktop */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a 
+              href="https://instagram.com/wildsart" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+              aria-label="Instagram"
+            >
+              <img src={instagramIcon} alt="Instagram" className="h-5 w-5" />
+            </a>
+            <a 
+              href="https://linkedin.com/in/wildscampos" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+              aria-label="LinkedIn"
+            >
+              <img src={linkedinIcon} alt="LinkedIn" className="h-5 w-5" />
+            </a>
+            <a 
+              href="https://tiktok.com/@wildsart" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+              aria-label="TikTok"
+            >
+              <img src={tiktokIcon} alt="TikTok" className="h-5 w-5" />
+            </a>
+            <a 
+              href="https://youtube.com/@wildsart" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+              aria-label="YouTube"
+            >
+              <img src={youtubeIcon} alt="YouTube" className="h-5 w-5" />
+            </a>
+          </div>
+
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <Button
@@ -98,7 +142,47 @@ export const Header = () => {
               </a>
             ))}
             
-            <div className="pt-4 space-y-3">
+            {/* Social Media Icons - Mobile */}
+            <div className="pt-4 pb-2 flex justify-center gap-6">
+              <a 
+                href="https://instagram.com/wildsart" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="Instagram"
+              >
+                <img src={instagramIcon} alt="Instagram" className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://linkedin.com/in/wildscampos" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="LinkedIn"
+              >
+                <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://tiktok.com/@wildsart" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="TikTok"
+              >
+                <img src={tiktokIcon} alt="TikTok" className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://youtube.com/@wildsart" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                aria-label="YouTube"
+              >
+                <img src={youtubeIcon} alt="YouTube" className="h-6 w-6" />
+              </a>
+            </div>
+            
+            <div className="pt-2 space-y-3">
               <Button 
                 variant="default" 
                 className="w-full"

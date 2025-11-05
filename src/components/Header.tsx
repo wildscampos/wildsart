@@ -82,7 +82,7 @@ export const Header = () => {
               className="hover:opacity-70 transition-opacity text-foreground"
               aria-label="Instagram"
             >
-              <img src={instagramIcon} alt="Instagram" className="h-5 w-5 dark:invert" />
+              <img src={instagramIcon} alt="Instagram" className="h-5 w-5" />
             </a>
             <a 
               href="https://linkedin.com/in/wildscampos" 
@@ -91,7 +91,7 @@ export const Header = () => {
               className="hover:opacity-70 transition-opacity text-foreground"
               aria-label="LinkedIn"
             >
-              <img src={linkedinIcon} alt="LinkedIn" className="h-5 w-5 dark:invert" />
+              <img src={linkedinIcon} alt="LinkedIn" className="h-5 w-5" />
             </a>
             <a 
               href="https://tiktok.com/@wildsart" 
@@ -100,7 +100,7 @@ export const Header = () => {
               className="hover:opacity-70 transition-opacity text-foreground"
               aria-label="TikTok"
             >
-              <img src={tiktokIcon} alt="TikTok" className="h-5 w-5 dark:invert" />
+              <img src={tiktokIcon} alt="TikTok" className="h-5 w-5" />
             </a>
             <a 
               href="https://youtube.com/@wildsart" 
@@ -109,7 +109,7 @@ export const Header = () => {
               className="hover:opacity-70 transition-opacity text-foreground"
               aria-label="YouTube"
             >
-              <img src={youtubeIcon} alt="YouTube" className="h-5 w-5 dark:invert" />
+              <img src={youtubeIcon} alt="YouTube" className="h-5 w-5" />
             </a>
           </div>
 
@@ -157,7 +157,7 @@ export const Header = () => {
                 className="hover:opacity-70 transition-opacity"
                 aria-label="Instagram"
               >
-                <img src={instagramIcon} alt="Instagram" className="h-6 w-6 dark:invert" />
+                <img src={instagramIcon} alt="Instagram" className="h-6 w-6" />
               </a>
               <a 
                 href="https://linkedin.com/in/wildscampos" 
@@ -166,7 +166,7 @@ export const Header = () => {
                 className="hover:opacity-70 transition-opacity"
                 aria-label="LinkedIn"
               >
-                <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6 dark:invert" />
+                <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" />
               </a>
               <a 
                 href="https://tiktok.com/@wildsart" 
@@ -175,7 +175,7 @@ export const Header = () => {
                 className="hover:opacity-70 transition-opacity"
                 aria-label="TikTok"
               >
-                <img src={tiktokIcon} alt="TikTok" className="h-6 w-6 dark:invert" />
+                <img src={tiktokIcon} alt="TikTok" className="h-6 w-6" />
               </a>
               <a 
                 href="https://youtube.com/@wildsart" 
@@ -184,7 +184,7 @@ export const Header = () => {
                 className="hover:opacity-70 transition-opacity"
                 aria-label="YouTube"
               >
-                <img src={youtubeIcon} alt="YouTube" className="h-6 w-6 dark:invert" />
+                <img src={youtubeIcon} alt="YouTube" className="h-6 w-6" />
               </a>
             </div>
             

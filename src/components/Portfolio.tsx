@@ -22,33 +22,39 @@ export const Portfolio = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="portfolio" className="py-20 bg-muted/30">
+    <section id="portfolio" className="py-20 bg-muted/30" aria-labelledby="portfolio-heading">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('portfolio.title')}</h2>
+        <header className="text-center mb-16">
+          <h2 id="portfolio-heading" className="text-3xl md:text-4xl font-bold mb-4">{t('portfolio.title')}</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             {t('portfolio.subtitle')}
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" role="list">
           {portfolioItems.map((item, index) => (
-            <Card 
-              key={index} 
-              className="group overflow-hidden hover:shadow-lg transition-all duration-300"
+            <article
+              key={index}
+              role="listitem"
             >
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={t(`portfolio.projects.${item.key}`)}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-4">
-                <p className="text-sm text-muted-foreground">{t(`portfolio.projects.${item.key}`)}</p>
-              </div>
-            </Card>
+              <Card 
+                className="group overflow-hidden hover:shadow-lg transition-all duration-300 h-full"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={`Projeto de ${t(`portfolio.projects.${item.key}`)} - Design gráfico profissional da Wilds Art`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                    width="400"
+                    height="400"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-sm font-medium text-muted-foreground">{t(`portfolio.projects.${item.key}`)}</h3>
+                </div>
+              </Card>
+            </article>
           ))}
         </div>
 

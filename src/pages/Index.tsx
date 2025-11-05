@@ -13,7 +13,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <StructuredData type="organization" />
       <Header />
-      <main>
+      <main id="main-content" role="main">
         <Hero />
         <About />
         <Services />

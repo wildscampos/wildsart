@@ -52,7 +52,7 @@ export const Footer = () => {
               href="https://instagram.com/wildsart" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:opacity-70 transition-opacity"
+              className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="Instagram"
             >
               <img src={instagramIcon} alt="Instagram" className="h-6 w-6" />
@@ -61,7 +61,7 @@ export const Footer = () => {
               href="https://linkedin.com/in/wildscampos" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:opacity-70 transition-opacity"
+              className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="LinkedIn"
             >
               <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" />
@@ -70,7 +70,7 @@ export const Footer = () => {
               href="https://tiktok.com/@wildsart" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:opacity-70 transition-opacity"
+              className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="TikTok"
             >
               <img src={tiktokIcon} alt="TikTok" className="h-6 w-6" />
@@ -79,7 +79,7 @@ export const Footer = () => {
               href="https://youtube.com/@wildsart" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="hover:opacity-70 transition-opacity"
+              className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="YouTube"
             >
               <img src={youtubeIcon} alt="YouTube" className="h-6 w-6" />

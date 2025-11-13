@@ -21,7 +21,7 @@ export const Footer = () => {
               loop
               muted
               playsInline
-              className="h-16 w-auto mx-auto"
+              className="h-32 w-auto mx-auto"
             />
           </div>
 

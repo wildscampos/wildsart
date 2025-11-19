@@ -51,7 +51,8 @@ export const Contact = () => {
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/5512981823416?text=${encodedMessage}`;
     
-    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
     
     form.reset();
     setIsSubmitting(false);

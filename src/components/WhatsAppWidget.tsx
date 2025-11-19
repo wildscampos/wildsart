@@ -19,7 +19,8 @@ const WhatsAppWidget: React.FC<WhatsAppWidgetProps> = ({
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(defaultMessage);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
+    const newWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
     setIsOpen(false);
   };
 

@@ -56,9 +56,7 @@ const translations = {
     // Navigation
     'nav.home': 'Início',
     'nav.services': 'Serviços',
-    'nav.portfolio': 'Portfólio',
     'nav.testimonials': 'Depoimentos',
-    'nav.plans': 'Planos',
     'nav.contact': 'Contato',
     
     // Hero Section
@@ -66,7 +64,6 @@ const translations = {
     'hero.subtitle': 'Onde sua visão vira design',
     'hero.description': 'Artes para redes sociais, identidade visual, manual de marca, vetorização, vetores para corte e gravação, rótulos e embalagens. Peças prontas para produzir e vender.',
     'hero.cta.quote': 'Falar agora com a Wilds Art',
-    'hero.cta.portfolio': 'Ver portfólio',
     'hero.trust.experience': '23 anos de experiência',
     'hero.trust.ready': 'Arquivos prontos para produção',
     'hero.trust.fast': 'Atendimento rápido',
@@ -122,17 +119,6 @@ const translations = {
     'services.landingpage.title': 'Landing Page',
     'services.landingpage.description': 'Páginas de conversão profissionais com design responsivo e foco em resultados.',
     'services.quote': 'Solicitar orçamento deste serviço',
-    
-    // Portfolio
-    'portfolio.title': 'Portfólio',
-    'portfolio.subtitle': 'Conheça alguns dos nossos trabalhos e projetos realizados',
-    'portfolio.cta': 'Quero algo assim',
-    'portfolio.projects.social': 'Projeto Wilds Art - designs para redes sociais',
-    'portfolio.projects.identity': 'Projeto Wilds Art - identidade visual',
-    'portfolio.projects.vector': 'Cantina das Marias - vetorização', 
-    'portfolio.projects.packaging': 'Projeto Wilds Art - rótulos e embalagens',
-    'portfolio.projects.manual': 'Projeto Wilds Art - manual de marca',
-    'portfolio.projects.landingpage': 'Transkav Express - criação de Landing Page',
     
     // Testimonials
     'testimonials.title': 'Veja como ajudamos empresas reais a crescer com design',
@@ -257,8 +243,6 @@ const translations = {
     'footer.rights': 'Todos os direitos reservados.',
     'footer.nav.home': 'Início',
     'footer.nav.services': 'Serviços',
-    'footer.nav.plans': 'Planos',
-    'footer.nav.portfolio': 'Portfólio',
     'footer.nav.testimonials': 'Depoimentos',
     'footer.nav.contact': 'Contato',
     'footer.privacy': 'Política de Privacidade',
@@ -329,7 +313,6 @@ const translations = {
     'terms.copyright.title': '7. Direitos autorais e licenças',
     'terms.copyright.license': 'Com a quitação, o cliente recebe licença de uso comercial das peças criadas para o projeto, de forma não exclusiva, salvo ajuste escrito em contrário.',
     'terms.copyright.thirdparty': 'Materiais de terceiros (ex.: bancos de imagem, tipografias) seguem a licença do fornecedor e podem ter custos adicionais, informados previamente na proposta.',
-    'terms.copyright.portfolio': 'A Wilds Art pode exibir o trabalho em portfólio (site e redes), preservando dados sensíveis; o cliente pode solicitar não divulgação antes da publicação.',
     'terms.delivery.title': '8. Entrega de arquivos',
     'terms.delivery.content': 'Entregas nos formatos adequados à finalidade (ex.: SVG, CDR, PDF, DXF, AI, PNG), conforme acordado. Arquivos editáveis e versões finais serão organizados segundo o escopo contratado.',
     'terms.limitations.title': '9. Limitações',
@@ -349,9 +332,7 @@ const translations = {
     // Navigation
     'nav.home': 'Home',
     'nav.services': 'Services',
-    'nav.portfolio': 'Portfolio',
     'nav.testimonials': 'Testimonials',
-    'nav.plans': 'Plans',
     'nav.contact': 'Contact',
     
     // Hero Section
@@ -359,7 +340,6 @@ const translations = {
     'hero.subtitle': 'Where your vision becomes design',
     'hero.description': 'Social media arts, visual identity, brand manual, vectorization, cutting and engraving vectors, labels and packaging. Ready-to-produce pieces for sale.',
     'hero.cta.quote': 'Request quote',
-    'hero.cta.portfolio': 'View portfolio',
     'hero.trust.experience': '23 years of experience',
     'hero.trust.ready': 'Production-ready files',
     'hero.trust.fast': 'Fast service',
@@ -445,8 +425,6 @@ const translations = {
     'footer.rights': 'All rights reserved.',
     'footer.nav.home': 'Home',
     'footer.nav.services': 'Services',
-    'footer.nav.plans': 'Plans',
-    'footer.nav.portfolio': 'Portfolio',
     'footer.nav.testimonials': 'Testimonials',
     'footer.nav.contact': 'Contact',
   },
@@ -455,9 +433,7 @@ const translations = {
     // Navigation
     'nav.home': 'Inicio',
     'nav.services': 'Servicios',
-    'nav.portfolio': 'Portafolio',
     'nav.testimonials': 'Testimonios',
-    'nav.plans': 'Planes',
     'nav.contact': 'Contacto',
     
     // Individual Services
@@ -492,8 +468,6 @@ const translations = {
     // Footer
     'footer.nav.home': 'Inicio',
     'footer.nav.services': 'Servicios',
-    'footer.nav.plans': 'Planes',
-    'footer.nav.portfolio': 'Portafolio',
     'footer.nav.testimonials': 'Testimonios',
     'footer.nav.contact': 'Contacto',
   },

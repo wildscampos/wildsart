@@ -64,7 +64,6 @@ export default function TermsOfService() {
                 <ul className="list-disc pl-6 space-y-2">
                   <li>{t('terms.copyright.license')}</li>
                   <li>{t('terms.copyright.thirdparty')}</li>
-                  <li>{t('terms.copyright.portfolio')}</li>
                 </ul>
               </section>
 

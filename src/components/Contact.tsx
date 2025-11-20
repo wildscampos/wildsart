@@ -4,6 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+import { Checkbox } from './ui/checkbox';
 import { useLanguage } from '@/contexts/LanguageContext';
 import {
   Form,
@@ -26,6 +27,9 @@ const formSchema = z.object({
   company: z.string().trim().min(1, { message: "Empresa é obrigatória" }).max(100),
   service: z.string().min(1, { message: "Selecione um serviço" }),
   email: z.string().trim().email({ message: "E-mail inválido" }).max(255),
+  consent: z.boolean().refine((val) => val === true, {
+    message: "Você precisa aceitar o tratamento de dados para prosseguir",
+  }),
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -41,6 +45,7 @@ export const Contact = () => {
       company: '',
       service: '',
       email: '',
+      consent: false,
     },
   });
 
@@ -141,6 +146,27 @@ export const Contact = () => {
                       <Input type="email" placeholder={t('contact.form.emailPlaceholder')} {...field} />
                     </FormControl>
                     <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="consent"
+                render={({ field }) => (
+                  <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                    <FormControl>
+                      <Checkbox
+                        checked={field.value}
+                        onCheckedChange={field.onChange}
+                      />
+                    </FormControl>
+                    <div className="space-y-1 leading-none">
+                      <FormLabel>
+                        Aceito o tratamento dos meus dados para atendimento e comunicação.
+                      </FormLabel>
+                      <FormMessage />
+                    </div>
                   </FormItem>
                 )}
               />

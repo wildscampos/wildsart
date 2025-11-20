@@ -34,19 +34,20 @@ export default function TermsOfService() {
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.workflow.title')}</h2>
-                <ol className="list-decimal pl-6 space-y-2">
+                <p className="mb-3">Cada projeto possui:</p>
+                <ul className="list-disc pl-6 space-y-2">
                   <li>{t('terms.workflow.briefing')}</li>
                   <li>{t('terms.workflow.proposal')}</li>
                   <li>{t('terms.workflow.approval')}</li>
                   <li>{t('terms.workflow.creation')}</li>
                   <li>{t('terms.workflow.revisions')}</li>
-                  <li>{t('terms.workflow.final')}</li>
-                </ol>
+                </ul>
+                <p className="mt-3">{t('terms.workflow.final')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.approval.title')}</h2>
-                <p>{t('terms.approval.content')}</p>
+                <p className="whitespace-pre-line">{t('terms.approval.content')}</p>
               </section>
 
               <section>
@@ -61,40 +62,44 @@ export default function TermsOfService() {
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.copyright.title')}</h2>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>{t('terms.copyright.license')}</li>
-                  <li>{t('terms.copyright.thirdparty')}</li>
-                </ul>
+                <p className="mb-3">{t('terms.copyright.license')}</p>
+                <p>{t('terms.copyright.thirdparty')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.delivery.title')}</h2>
-                <p>{t('terms.delivery.content')}</p>
+                <p className="mb-3">Após quitação:</p>
+                <p className="whitespace-pre-line mb-3">{t('terms.delivery.content')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.limitations.title')}</h2>
-                <p>{t('terms.limitations.content')}</p>
+                <p className="whitespace-pre-line">{t('terms.limitations.content')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.support.title')}</h2>
-                <p>{t('terms.support.content')}</p>
+                <p className="whitespace-pre-line">{t('terms.support.content')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.privacy.title')}</h2>
-                <p>{t('terms.privacy.content')}</p>
+                <p className="whitespace-pre-line">{t('terms.privacy.content')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.term.title')}</h2>
-                <p>{t('terms.term.content')}</p>
+                <p className="whitespace-pre-line">{t('terms.term.content')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('terms.law.title')}</h2>
-                <p>{t('terms.law.content')}</p>
+                <p className="whitespace-pre-line">{t('terms.law.content')}</p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-semibold mb-4 text-foreground">14. Legislação e foro</h2>
+                <p>Aplica-se a legislação brasileira.<br/>No consumo, prevalece o foro do cliente.<br/>Em contratos B2B, o foro da sede da Wilds Art.</p>
               </section>
 
               <div className="pt-8 mt-8 border-t border-border text-center">

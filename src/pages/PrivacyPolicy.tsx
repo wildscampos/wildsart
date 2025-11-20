@@ -29,12 +29,10 @@ export default function PrivacyPolicy() {
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('privacy.data.title')}</h2>
-                <ul className="list-disc pl-6 space-y-3">
-                  <li>{t('privacy.data.contact')}</li>
-                  <li>{t('privacy.data.navigation')}</li>
-                  <li>{t('privacy.data.contract')}</li>
-                  <li>{t('privacy.data.content')}</li>
-                </ul>
+                <p className="mb-2">{t('privacy.data.contact')}</p>
+                <p className="mb-2">{t('privacy.data.navigation')}</p>
+                <p className="mb-2">{t('privacy.data.contract')}</p>
+                <p>{t('privacy.data.content')}</p>
               </section>
 
               <section>
@@ -48,17 +46,17 @@ export default function PrivacyPolicy() {
                   <li>{t('privacy.legal.security')}</li>
                   <li>{t('privacy.legal.marketing')}</li>
                 </ul>
+                <p className="mt-3 whitespace-pre-line">{t('privacy.sharing.note')}</p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-semibold mb-4 text-foreground">{t('privacy.sharing.title')}</h2>
                 <p className="mb-3">{t('privacy.sharing.intro')}</p>
-                <ul className="list-disc pl-6 space-y-2 mb-4">
+                <ul className="list-disc pl-6 space-y-2">
                   <li>{t('privacy.sharing.platforms')}</li>
                   <li>{t('privacy.sharing.hosting')}</li>
                   <li>{t('privacy.sharing.payment')}</li>
                 </ul>
-                <p>{t('privacy.sharing.note')}</p>
               </section>
 
               <section>

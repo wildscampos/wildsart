@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 import logoVideo from '@/assets/logo-video.mp4';
 import instagramIcon from '@/assets/instagram-icon.svg';
 import linkedinIcon from '@/assets/linkedin-icon.svg';
@@ -55,7 +56,7 @@ export const Footer = () => {
               className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="Instagram"
             >
-              <img src={instagramIcon} alt="Instagram" className="h-6 w-6" />
+              <OptimizedImage src={instagramIcon} alt="Instagram" className="h-6 w-6" width={24} height={24} />
             </a>
             <a 
               href="https://linkedin.com/in/wildscampos" 
@@ -64,7 +65,7 @@ export const Footer = () => {
               className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="LinkedIn"
             >
-              <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" />
+              <OptimizedImage src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" width={24} height={24} />
             </a>
             <a 
               href="https://tiktok.com/@wildsart" 
@@ -73,7 +74,7 @@ export const Footer = () => {
               className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="TikTok"
             >
-              <img src={tiktokIcon} alt="TikTok" className="h-6 w-6" />
+              <OptimizedImage src={tiktokIcon} alt="TikTok" className="h-6 w-6" width={24} height={24} />
             </a>
             <a 
               href="https://youtube.com/@wildsart" 
@@ -82,7 +83,7 @@ export const Footer = () => {
               className="transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="YouTube"
             >
-              <img src={youtubeIcon} alt="YouTube" className="h-6 w-6" />
+              <OptimizedImage src={youtubeIcon} alt="YouTube" className="h-6 w-6" width={24} height={24} />
             </a>
           </div>
 

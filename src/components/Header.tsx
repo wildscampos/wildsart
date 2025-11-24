@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { ThemeToggle } from './ui/theme-toggle';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/contexts/ThemeContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 import logoLight from '@/assets/logo-light.jpg';
 import logoDark from '@/assets/logo-dark.jpg';
 import instagramIcon from '@/assets/instagram-icon.svg';
@@ -51,10 +52,13 @@ export const Header = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Logo - Left side */}
         <div className="flex items-center flex-shrink-0">
-          <img 
+          <OptimizedImage 
             src={theme === 'dark' ? logoDark : logoLight}
             alt="Wilds Art - logotipo" 
             className="h-8 w-auto"
+            eager
+            width={120}
+            height={32}
           />
         </div>
 
@@ -82,7 +86,7 @@ export const Header = () => {
               className="text-foreground transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="Instagram"
             >
-              <img src={instagramIcon} alt="Instagram" className="h-5 w-5" />
+              <OptimizedImage src={instagramIcon} alt="Instagram" className="h-5 w-5" eager width={20} height={20} />
             </a>
             <a 
               href="https://linkedin.com/in/wildscampos" 
@@ -91,7 +95,7 @@ export const Header = () => {
               className="text-foreground transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="LinkedIn"
             >
-              <img src={linkedinIcon} alt="LinkedIn" className="h-5 w-5" />
+              <OptimizedImage src={linkedinIcon} alt="LinkedIn" className="h-5 w-5" eager width={20} height={20} />
             </a>
             <a 
               href="https://tiktok.com/@wildsart" 
@@ -100,7 +104,7 @@ export const Header = () => {
               className="text-foreground transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="TikTok"
             >
-              <img src={tiktokIcon} alt="TikTok" className="h-5 w-5" />
+              <OptimizedImage src={tiktokIcon} alt="TikTok" className="h-5 w-5" eager width={20} height={20} />
             </a>
             <a 
               href="https://youtube.com/@wildsart" 
@@ -109,7 +113,7 @@ export const Header = () => {
               className="text-foreground transition-all duration-300 hover:scale-110 hover:rotate-6"
               aria-label="YouTube"
             >
-              <img src={youtubeIcon} alt="YouTube" className="h-5 w-5" />
+              <OptimizedImage src={youtubeIcon} alt="YouTube" className="h-5 w-5" eager width={20} height={20} />
             </a>
           </div>
 
@@ -157,7 +161,7 @@ export const Header = () => {
                 className="transition-all duration-300 hover:scale-110 hover:rotate-6"
                 aria-label="Instagram"
               >
-                <img src={instagramIcon} alt="Instagram" className="h-6 w-6" />
+                <OptimizedImage src={instagramIcon} alt="Instagram" className="h-6 w-6" eager width={24} height={24} />
               </a>
               <a 
                 href="https://linkedin.com/in/wildscampos" 
@@ -166,7 +170,7 @@ export const Header = () => {
                 className="transition-all duration-300 hover:scale-110 hover:rotate-6"
                 aria-label="LinkedIn"
               >
-                <img src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" />
+                <OptimizedImage src={linkedinIcon} alt="LinkedIn" className="h-6 w-6" eager width={24} height={24} />
               </a>
               <a 
                 href="https://tiktok.com/@wildsart" 
@@ -175,7 +179,7 @@ export const Header = () => {
                 className="transition-all duration-300 hover:scale-110 hover:rotate-6"
                 aria-label="TikTok"
               >
-                <img src={tiktokIcon} alt="TikTok" className="h-6 w-6" />
+                <OptimizedImage src={tiktokIcon} alt="TikTok" className="h-6 w-6" eager width={24} height={24} />
               </a>
               <a 
                 href="https://youtube.com/@wildsart" 
@@ -184,7 +188,7 @@ export const Header = () => {
                 className="transition-all duration-300 hover:scale-110 hover:rotate-6"
                 aria-label="YouTube"
               >
-                <img src={youtubeIcon} alt="YouTube" className="h-6 w-6" />
+                <OptimizedImage src={youtubeIcon} alt="YouTube" className="h-6 w-6" eager width={24} height={24} />
               </a>
             </div>
             

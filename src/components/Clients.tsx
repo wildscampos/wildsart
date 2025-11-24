@@ -1,4 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
+import { OptimizedImage } from '@/components/ui/optimized-image';
 
 const clients = [
   {
@@ -40,10 +41,12 @@ const ClientCard = ({ client }: { client: typeof clients[0] }) => {
   const cardContent = (
     <>
       <div className="w-32 h-32 mb-4 flex items-center justify-center bg-white rounded-lg p-3 shadow-sm">
-        <img
+        <OptimizedImage
           src={client.logo}
           alt={`Logo ${client.name}`}
-          className="max-w-full max-h-full object-contain"
+          className="max-w-full max-h-full"
+          width={128}
+          height={128}
         />
       </div>
       <div className="text-center">

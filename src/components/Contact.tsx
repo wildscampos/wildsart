@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Checkbox } from './ui/checkbox';
@@ -162,8 +163,23 @@ export const Contact = () => {
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
-                      <FormLabel>
-                        Aceito o tratamento dos meus dados para atendimento e comunicação.
+                      <FormLabel className="font-normal">
+                        Aceito o tratamento dos meus dados para atendimento e comunicação. Consulte nossa{' '}
+                        <Link 
+                          to="/politica-privacidade" 
+                          className="text-primary underline hover:text-primary/80 transition-colors"
+                          target="_blank"
+                        >
+                          Política de Privacidade
+                        </Link>
+                        {' '}e{' '}
+                        <Link 
+                          to="/termos-servico" 
+                          className="text-primary underline hover:text-primary/80 transition-colors"
+                          target="_blank"
+                        >
+                          Termos de Serviço
+                        </Link>.
                       </FormLabel>
                       <FormMessage />
                     </div>

@@ -3,7 +3,7 @@
 
 /*
   # Content Security Policy - Prevents XSS attacks by controlling resource sources
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://wa.me; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; media-src 'self' blob:; connect-src 'self' https://wa.me; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;
   
   # X-Frame-Options - Prevents clickjacking attacks by disallowing the site to be embedded in iframes
   X-Frame-Options: DENY
@@ -21,11 +21,20 @@
   X-XSS-Protection: 1; mode=block
   
   # Permissions-Policy - Controls which browser features can be used
-  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()
-  
-  # Cache-Control for static assets
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
+
+# Cache-Control for static assets (CSS, JS, images)
+/assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Additional cache control for HTML files
+# Cache-Control for uploaded files
+/lovable-uploads/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Additional cache control for HTML files - no caching to ensure fresh content
 /*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Root index - no caching
+/
   Cache-Control: public, max-age=0, must-revalidate

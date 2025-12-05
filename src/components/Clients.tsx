@@ -43,7 +43,7 @@ const ClientCard = ({ client }: { client: typeof clients[0] }) => {
       <div className="w-32 h-32 mb-4 flex items-center justify-center bg-white rounded-lg p-3 shadow-sm">
         <OptimizedImage
           src={client.logo}
-          alt={`Logo ${client.name}`}
+          alt={`Logo da empresa ${client.name} - ${client.subtitle}`}
           className="max-w-full max-h-full"
           width={128}
           height={128}
@@ -66,7 +66,8 @@ const ClientCard = ({ client }: { client: typeof clients[0] }) => {
         href={client.website}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex flex-col items-center p-8 bg-background rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer shrink-0 w-[280px]"
+        className="group flex flex-col items-center p-8 bg-background rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer shrink-0 w-[280px] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        aria-label={`Visitar site de ${client.name}`}
       >
         {cardContent}
       </a>
@@ -84,10 +85,10 @@ export const Clients = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-24 bg-muted/50 overflow-hidden">
+    <section className="py-24 bg-muted/50 overflow-hidden" aria-labelledby="clients-heading">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 id="clients-heading" className="text-3xl md:text-4xl font-bold mb-6">
             {t('clients.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

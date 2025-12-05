@@ -24,10 +24,16 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           "availableLanguage": "Portuguese"
         },
         "sameAs": [
-          "https://instagram.com/wildsarts",
-          "https://youtube.com/wildsarts",
-          "https://linkedin.com/company/wildsarts"
-        ]
+          "https://instagram.com/wildsart",
+          "https://youtube.com/@wildsart",
+          "https://linkedin.com/in/wildscampos",
+          "https://tiktok.com/@wildsart"
+        ],
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "priceRange": "$$"
       };
     } else if (type === 'faqPage' && data) {
       schema = {

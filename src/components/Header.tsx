@@ -48,7 +48,7 @@ export const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border" role="banner">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between gap-4">
         {/* Logo - Left side */}
         <div className="flex items-center flex-shrink-0">
@@ -63,12 +63,12 @@ export const Header = () => {
         </div>
 
         {/* Desktop Navigation - Center */}
-        <nav className="hidden lg:flex items-center space-x-6 flex-1 justify-center">
+        <nav className="hidden lg:flex items-center space-x-6 flex-1 justify-center" role="navigation" aria-label="Navegação principal">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors whitespace-nowrap"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
             >
               {item.label}
             </a>
@@ -123,7 +123,9 @@ export const Header = () => {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle mobile menu"
+              aria-label={mobileMenuOpen ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
             >
               {mobileMenuOpen ? (
                 <X className="h-5 w-5" />
@@ -139,7 +141,7 @@ export const Header = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div ref={mobileMenuRef} className="lg:hidden border-t border-border bg-background">
+        <nav ref={mobileMenuRef} id="mobile-menu" className="lg:hidden border-t border-border bg-background" role="navigation" aria-label="Menu mobile">
           <div className="container mx-auto px-4 py-4 space-y-4">
             {navItems.map((item) => (
               <a
@@ -210,7 +212,7 @@ export const Header = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

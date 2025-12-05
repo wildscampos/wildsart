@@ -65,10 +65,10 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contato" className="py-20 bg-muted/30">
+    <section id="contato" className="py-20 bg-muted/30" aria-labelledby="contact-heading">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold mb-4">
             {t('contact.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -160,14 +160,16 @@ export const Contact = () => {
                       <Checkbox
                         checked={field.value}
                         onCheckedChange={field.onChange}
+                        id="consent-checkbox"
+                        aria-describedby="consent-description"
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
-                      <FormLabel className="font-normal">
+                      <FormLabel htmlFor="consent-checkbox" id="consent-description" className="font-normal cursor-pointer">
                         Aceito o tratamento dos meus dados para atendimento e comunicação. Consulte nossa{' '}
                         <Link 
                           to="/politica-privacidade" 
-                          className="text-primary underline hover:text-primary/80 transition-colors"
+                          className="text-primary underline hover:text-primary/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
                           target="_blank"
                         >
                           Política de Privacidade
@@ -175,7 +177,7 @@ export const Contact = () => {
                         {' '}e{' '}
                         <Link 
                           to="/termos-servico" 
-                          className="text-primary underline hover:text-primary/80 transition-colors"
+                          className="text-primary underline hover:text-primary/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm"
                           target="_blank"
                         >
                           Termos de Serviço

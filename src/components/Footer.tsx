@@ -11,7 +11,7 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted border-t border-border py-12">
+    <footer className="bg-muted border-t border-border py-12" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-8">
           {/* Logo */}
@@ -23,6 +23,7 @@ export const Footer = () => {
               muted
               playsInline
               className="h-32 w-auto mx-auto"
+              aria-label="Wilds Art - logotipo animado"
             />
           </div>
 
@@ -32,17 +33,17 @@ export const Footer = () => {
           </p>
 
           {/* Navigation Links */}
-          <nav className="flex flex-wrap justify-center gap-6 text-sm">
-            <a href="/#inicio" className="text-muted-foreground hover:text-primary transition-colors">
+          <nav className="flex flex-wrap justify-center gap-6 text-sm" role="navigation" aria-label="Links do rodapé">
+            <a href="/#inicio" className="text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm">
               {t('nav.home')}
             </a>
-            <a href="/#servicos" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#servicos" className="text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm">
               {t('nav.services')}
             </a>
-            <a href="/#depoimentos" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#depoimentos" className="text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm">
               {t('nav.testimonials')}
             </a>
-            <a href="/#contato" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/#contato" className="text-muted-foreground hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm">
               {t('nav.contact')}
             </a>
           </nav>
@@ -88,11 +89,11 @@ export const Footer = () => {
           </div>
 
           {/* Legal Links */}
-          <nav className="flex flex-wrap justify-center gap-6 text-xs text-muted-foreground/80">
-            <a href="/politica-privacidade" className="hover:text-primary transition-colors">
+          <nav className="flex flex-wrap justify-center gap-6 text-xs text-muted-foreground/80" aria-label="Links legais">
+            <a href="/politica-privacidade" className="hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm">
               {t('footer.privacy')}
             </a>
-            <a href="/termos-servico" className="hover:text-primary transition-colors">
+            <a href="/termos-servico" className="hover:text-primary transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-sm">
               {t('footer.terms')}
             </a>
           </nav>

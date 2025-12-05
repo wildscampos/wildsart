@@ -3,19 +3,23 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://wildsarts.com/</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-12-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://wildsarts.com/lovable-uploads/db1fc48f-67f3-472a-b6f2-7f21d2d989d4.png</image:loc>
+      <image:title>Wilds Art - Design Gráfico Profissional</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://wildsarts.com/politica-privacidade</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-12-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://wildsarts.com/termos-servico</loc>
-    <lastmod>2025-01-09</lastmod>
+    <lastmod>2025-12-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

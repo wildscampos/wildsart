@@ -97,10 +97,6 @@ export default function TermsOfService() {
                 <p className="whitespace-pre-line">{t('terms.law.content')}</p>
               </section>
 
-              <section>
-                <h2 className="text-2xl font-semibold mb-4 text-foreground">14. Legislação e foro</h2>
-                <p>Aplica-se a legislação brasileira.<br/>No consumo, prevalece o foro do cliente.<br/>Em contratos B2B, o foro da sede da Wilds Art.</p>
-              </section>
 
               <div className="pt-8 mt-8 border-t border-border text-center">
                 <p className="whitespace-pre-line text-sm">{t('terms.footer')}</p>

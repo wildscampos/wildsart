@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# Meu Corre $ MVP
 
-## Project info
+MVP funcional de marketplace logístico regional para **Lorena-SP**, conectando:
+- Cliente
+- Lojista
+- Motoboy
+- Admin
 
-**URL**: https://lovable.dev/projects/6129b1bb-0b32-4c5c-9f4d-d9a64f1aa822
+Slogan: **"Aqui o seu corre vale mais!"**
 
-## How can I edit this code?
+## Stack
+- React + TypeScript (Vite)
+- Tailwind CSS
+- shadcn/ui
+- Persistência local via `localStorage` (modo demo)
 
-There are several ways of editing your application.
+> Observação: este MVP é focado em demonstração para investidor (sem pagamentos e sem geolocalização real).
 
-**Use Lovable**
+## Regras de negócio aplicadas
+- Taxa de entrega fixa: **R$ 7,00**
+- Taxa da plataforma por pedido: **R$ 1,50**
+- Ganho do motoboy por entrega: **R$ 5,50**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6129b1bb-0b32-4c5c-9f4d-d9a64f1aa822) and start prompting.
+## Usuários de demonstração
+- `cliente@meucorre.com` / `123456`
+- `lojista@meucorre.com` / `123456`
+- `motoboy@meucorre.com` / `123456`
+- `admin@meucorre.com` / `123456`
 
-Changes made via Lovable will be committed automatically to this repo.
+## Funcionalidades do fluxo principal
+- Login e cadastro com seleção de perfil
+- Cliente cria pedido com loja, itens e endereço
+- Lojista aceita/recusa e atualiza status do preparo
+- Motoboy fica online/offline, aceita corrida e avança status da entrega
+- Cliente acompanha status no histórico
+- Admin acompanha indicadores e fluxo em tempo real
 
-**Use your preferred IDE**
+## Rotas
+- `/`
+- `/login`
+- `/cadastro`
+- `/cliente`
+- `/cliente/lojas`
+- `/cliente/pedido/:id`
+- `/lojista`
+- `/motoboy`
+- `/admin`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Como rodar
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Acesse `http://localhost:5173`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Build de produção
+```bash
+npm run build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+## Seed (modo demo)
+Este projeto usa seed automático no front-end:
+- Ao abrir o app, se não houver dados no `localStorage`, os dados iniciais são carregados automaticamente.
+- Para resetar os dados, limpe o `localStorage` do navegador.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6129b1bb-0b32-4c5c-9f4d-d9a64f1aa822) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

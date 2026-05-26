@@ -1,73 +1,44 @@
-# Welcome to your Lovable project
+# Meu Corre $ — MVP Operacional (Web Demo)
 
-## Project info
+## Visão geral
+Este projeto implementa um MVP funcional do **Meu Corre $** para demonstração de fluxo logístico regional: cliente, lojista, motoboy e admin.
 
-**URL**: https://lovable.dev/projects/6129b1bb-0b32-4c5c-9f4d-d9a64f1aa822
+## O que já funciona
+- Login/cadastro com perfil e persistência de sessão.
+- Aprovação pendente, bloqueio/suspensão de usuário.
+- Fluxo oficial de status de entrega:
+  - `criado`, `procurando_motoboy`, `aceito`, `indo_coleta`, `coletado`, `indo_entrega`, `entregue`, `cancelado`.
+- Status oficial de motoboy:
+  - `offline`, `online`, `em_entrega`, `indisponivel`.
+- Cálculos financeiros em **centavos** (sem `double/float`):
+  - Entrega base: R$ 10,00 (1000)
+  - Lojista paga +R$ 0,75
+  - Motoboy recebe -R$ 0,75
+  - Plataforma recebe R$ 1,50
+- Painel Admin com métricas, aprovação/bloqueio e logs.
 
-## How can I edit this code?
+## Contas demo
+- `cliente@meucorre.com` / `123456`
+- `lojista@meucorre.com` / `123456`
+- `motoboy@meucorre.com` / `123456`
+- `admin@meucorre.com` / `123456`
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/6129b1bb-0b32-4c5c-9f4d-d9a64f1aa822) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Rodando localmente
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Build:
+```bash
+npm run build
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6129b1bb-0b32-4c5c-9f4d-d9a64f1aa822) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## Observação importante (produção real)
+Este repositório está em stack **React/Vite web**, sem backend Firebase real. Para operação real, ainda é necessário conectar:
+- Firebase Auth
+- Firestore + Security Rules
+- Cloud Functions
+- FCM
+- Storage
+- telemetria/monitoramento e mapa em tempo real

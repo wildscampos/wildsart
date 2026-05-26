@@ -1,67 +1,44 @@
-# Meu Corre $ MVP
+# Meu Corre $ — MVP Operacional (Web Demo)
 
-MVP funcional de marketplace logístico regional para **Lorena-SP**, conectando:
-- Cliente
-- Lojista
-- Motoboy
-- Admin
+## Visão geral
+Este projeto implementa um MVP funcional do **Meu Corre $** para demonstração de fluxo logístico regional: cliente, lojista, motoboy e admin.
 
-Slogan: **"Aqui o seu corre vale mais!"**
+## O que já funciona
+- Login/cadastro com perfil e persistência de sessão.
+- Aprovação pendente, bloqueio/suspensão de usuário.
+- Fluxo oficial de status de entrega:
+  - `criado`, `procurando_motoboy`, `aceito`, `indo_coleta`, `coletado`, `indo_entrega`, `entregue`, `cancelado`.
+- Status oficial de motoboy:
+  - `offline`, `online`, `em_entrega`, `indisponivel`.
+- Cálculos financeiros em **centavos** (sem `double/float`):
+  - Entrega base: R$ 10,00 (1000)
+  - Lojista paga +R$ 0,75
+  - Motoboy recebe -R$ 0,75
+  - Plataforma recebe R$ 1,50
+- Painel Admin com métricas, aprovação/bloqueio e logs.
 
-## Stack
-- React + TypeScript (Vite)
-- Tailwind CSS
-- shadcn/ui
-- Persistência local via `localStorage` (modo demo)
-
-> Observação: este MVP é focado em demonstração para investidor (sem pagamentos e sem geolocalização real).
-
-## Regras de negócio aplicadas
-- Taxa de entrega fixa: **R$ 7,00**
-- Taxa da plataforma por pedido: **R$ 1,50**
-- Ganho do motoboy por entrega: **R$ 5,50**
-
-## Usuários de demonstração
+## Contas demo
 - `cliente@meucorre.com` / `123456`
 - `lojista@meucorre.com` / `123456`
 - `motoboy@meucorre.com` / `123456`
 - `admin@meucorre.com` / `123456`
 
-## Funcionalidades do fluxo principal
-- Login e cadastro com seleção de perfil
-- Cliente cria pedido com loja, itens e endereço
-- Lojista aceita/recusa e atualiza status do preparo
-- Motoboy fica online/offline, aceita corrida e avança status da entrega
-- Cliente acompanha status no histórico
-- Admin acompanha indicadores e fluxo em tempo real
-
-## Rotas
-- `/`
-- `/login`
-- `/cadastro`
-- `/cliente`
-- `/cliente/lojas`
-- `/cliente/pedido/:id`
-- `/lojista`
-- `/motoboy`
-- `/admin`
-
-## Como rodar
+## Rodando localmente
 ```bash
 npm install
 npm run dev
 ```
 
-Acesse `http://localhost:5173`.
-
-## Build de produção
+Build:
 ```bash
 npm run build
-npm run preview
 ```
 
-## Seed (modo demo)
-Este projeto usa seed automático no front-end:
-- Ao abrir o app, se não houver dados no `localStorage`, os dados iniciais são carregados automaticamente.
-- Para resetar os dados, limpe o `localStorage` do navegador.
-
+## Observação importante (produção real)
+Este repositório está em stack **React/Vite web**, sem backend Firebase real. Para operação real, ainda é necessário conectar:
+- Firebase Auth
+- Firestore + Security Rules
+- Cloud Functions
+- FCM
+- Storage
+- telemetria/monitoramento e mapa em tempo real
